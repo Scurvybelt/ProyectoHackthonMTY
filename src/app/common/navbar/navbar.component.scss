@@ -13,10 +13,11 @@
     };
     &.is-sticky {
         position: fixed;
-        background-color: var(--whiteColor);
+        background-color: var(--rojo);
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
         animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-
+        
+        
         .navbar-brand {
             img {
                 &:nth-child(1) {
@@ -32,7 +33,7 @@
                 .navbar-nav {
                     .nav-item {
                         a {
-                            color: var(--blackColor);
+                            color: var(--blanco);
 
                             &:hover, &:focus, &.active {
                                 color: var(--primaryColor);
@@ -40,7 +41,7 @@
                         }
                         &:hover, &.active {
                             a {
-                                color: var(--primaryColor);
+                                color: var(--negro);
                             }
                         }
                         .dropdown-menu {
@@ -154,13 +155,13 @@
                 }
                 .others-options {
                     .login-btn {
-                        color: var(--blackColor);
+                        color: var(--blanco);
 
                         i {
-                            color: var(--primaryColor);
+                            color: var(--blanco);
                         }
                         &:hover {
-                            color: var(--primaryColor);
+                            color: var(--negro);
                         }
                     }
                 }

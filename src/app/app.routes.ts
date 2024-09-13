@@ -25,10 +25,10 @@ import { ContactPageOneComponent } from './pages/contact-page-one/contact-page-o
 import { ContactPageTwoComponent } from './pages/contact-page-two/contact-page-two.component';
 
 export const routes: Routes = [
-    {path: '', component: BankingPaymentProcessingComponent},
+    // {path: '', component: BankingPaymentProcessingComponent},
     {path: 'index-2', component: LoanProvidersComponent},
     {path: 'index-3', component: DigitalBankingComponent},
-    {path: 'index-4', component: FinancialServiceProviderComponent},
+    {path: '', component: FinancialServiceProviderComponent},
     {path: 'index-5', component: BankersEntrepreneursComponent},
     {path: 'index-6', component: SocialFinanceAgencyComponent},
     {path: 'index-7', component: CurrencyTransferProviderComponent},
