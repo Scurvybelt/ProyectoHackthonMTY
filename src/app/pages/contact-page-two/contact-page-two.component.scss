@@ -1,0 +1,248 @@
+.currency-transfer-provider-with-background-color {
+    background-color: #F4F7F9;
+}
+.ctp-contact-form {
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05);
+    background-color: var(--whiteColor);
+    border-radius: 15px;
+    padding: 40px;
+
+    h3 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: var(--blackColor);
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 35px;
+        
+        label {
+            background-color: var(--whiteColor);
+            border: 1px solid #E5E5E5;
+            color: var(--bodyColor);
+            border-radius: 5px;
+            position: absolute;
+            padding: 5px 10px;
+            display: block;
+            left: 20px;
+            top: -10px;
+            z-index: 1;
+            font: {
+                family: var(--headingFontFamily);
+                weight: 500;
+            };
+        }
+        .form-control {
+            height: auto;
+            line-height: unset;
+            border-radius: 5px;
+            color: var(--blackColor);
+            border: 1px solid #E5E5E5;
+            padding: 38px 100px 18px 20px;
+            background-color: var(--whiteColor);
+            font: {
+                family: var(--headingFontFamily);
+                size: var(--fontSize);
+                weight: 600;
+            };
+            &::placeholder {
+                color: var(--blackColor);
+            }
+        }
+        textarea {
+            &.form-control {
+                height: 150px !important;
+                line-height: normal;
+            }
+        }
+    }
+    .btn-primary {
+        border-radius: 50px;
+        padding: 20px 30px;
+        width: 100%;
+
+        &::before {
+            border-radius: 50px;
+        }
+        &::after {
+            border-radius: 50px;
+        }
+    }
+}
+.ctp-contact-information {
+    .information-box {
+        box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05);
+        background-color: var(--whiteColor);
+        border-radius: 15px;
+        margin-bottom: 25px;
+        padding: 40px;
+        
+        h3 {
+            font-size: 20px;
+            margin-bottom: 18px;
+            color: var(--blackColor);
+        }
+        .contact-info {
+            padding: 0;
+            margin-bottom: 0;
+
+            li {
+                color: var(--bodyColor);
+                list-style-type: none;
+                margin-bottom: 15px;
+                position: relative;
+                padding-left: 85px;
+                font: {
+                    size: 16px;
+                    family: var(--headingFontFamily);
+                };
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &.email {
+                    padding-left: 65px;
+                }
+                &.phone {
+                    padding-left: 65px;
+                }
+                .sub {
+                    background: var(--primaryGradientColor);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    font: {
+                        size: 16px;
+                        family: var(--headingFontFamily);
+                    };
+                }
+                .info {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    span {
+                        display: block;
+                        margin-bottom: 2px;
+                        color: var(--blackColor);
+                        font: {
+                            size: 16px;
+                            family: var(--headingFontFamily);
+                        };
+                    }
+                    a {
+                        color: var(--bodyColor);
+                        font: {
+                            family: var(--headingFontFamily);
+                            size: 16px;
+                        };
+                        &:hover {
+                            color: var(--primaryColor);
+                        }
+                    }
+                }
+            }
+        }
+        .time-info {
+            padding: 0;
+            margin-bottom: 0;
+
+            li {
+                list-style-type: none;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .color {
+                    background: var(--primaryGradientColor);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    font: {
+                        size: 16px;
+                        family: var(--headingFontFamily);
+                    };
+                }
+                span {
+                    color: var(--bodyColor);
+                    font: {
+                        family: var(--headingFontFamily);
+                        size: 16px;
+                    };
+                }
+            }
+        }
+    }
+    .information-map {
+        .map {
+            width: 100%;
+            height: 290px;
+            border-radius: 15px;
+            margin-bottom: -8px;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .ctp-contact-form {
+        padding: 25px;
+
+        h3 {
+            font-size: 24px;
+        }
+    }
+    .ctp-contact-information {
+        margin-top: 30px;
+
+        .information-box {
+            padding: 25px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .ctp-contact-information {
+        margin-top: 30px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .ctp-contact-form {
+        padding: 30px;
+    }
+    .ctp-contact-information {
+        .information-box {
+            padding: 25px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .ctp-contact-information {
+        .information-box {
+            padding: 25px;
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

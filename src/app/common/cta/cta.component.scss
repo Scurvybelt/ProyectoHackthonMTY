@@ -1,0 +1,82 @@
+.account-create-area {
+    z-index: 1;
+    position: relative;
+    background: var(--primaryGradientColor);
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    }
+    &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: .20;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background: {
+            image: url(../../../../public/images/bg_lines.svg);
+            repeat: no-repeat;
+            position: center;
+            size: 200%;
+        };
+    }
+}
+.account-create-content {
+    text-align: center;
+
+    h2 {
+        text-transform: uppercase;
+        color: var(--whiteColor);
+        max-width: 530px;
+        font-size: 40px;
+        margin: {
+            bottom: 0;
+            left: auto;
+            right: auto;
+        };
+    }
+    p {
+        color: var(--whiteColor);
+        line-height: initial;
+        font-size: 18px;
+        margin: {
+            top: 20px;
+            bottom: 0;
+        };
+    }
+    .btn-primary {
+        margin-top: 30px;
+        padding: 16px 30px;
+
+        &::before {
+            background: var(--secondaryGradientColor);
+        }
+        &::after {
+            background: var(--whiteColor);
+        }
+        &:hover, &:focus {
+            color: var(--blackColor) !important;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

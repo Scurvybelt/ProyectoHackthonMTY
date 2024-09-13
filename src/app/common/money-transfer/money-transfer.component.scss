@@ -1,0 +1,339 @@
+.ctp-send-money-online-area {
+    position: relative;
+    z-index: 1;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    margin: {
+        left: 35px;
+        right: 35px;
+    };
+    &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        content: "";
+        width: 100%;
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+.ctp-send-money-online-content {
+    h1 {
+        color: var(--whiteColor);
+        margin-bottom: 0;
+        font-size: 40px;
+    }
+    .ctp-list {
+        padding: 0;
+        margin: {
+            top: 25px;
+            bottom: 0;
+        };
+        li {
+            color: var(--whiteColor);
+            list-style-type: none;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 30px;
+            font: {
+                size: 18px;
+                family: var(--headingFontFamily);
+            };
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                position: absolute;
+                top: 2px;
+                left: 0;
+            }
+        }
+    }
+    .video-view {
+        margin-top: 30px;
+
+        .video-btn {
+            display: flex;
+            align-items: center;
+
+            i {
+                width: 65px;
+                height: 65px;
+                font-size: 30px;
+                line-height: 65px;
+                text-align: center;
+                border-radius: 50px;
+                display: inline-block;
+                color: var(--whiteColor);
+                background: var(--primaryGradientColor);
+            }
+            span {
+                color: var(--whiteColor);
+                margin-left: 10px;
+                font: {
+                    size: 18px;
+                    family: var(--headingFontFamily);
+                };
+            }
+        }
+    }
+}
+.ctp-send-money-online-form {
+    max-width: 550px;
+    margin-left: auto;
+
+    .form-header {
+        background: var(--primaryGradientColor);
+        border-radius: 15px;
+        text-align: center;
+        padding: 25px;
+
+        span {
+            display: inline-block;
+            color: var(--whiteColor);
+            margin-bottom: 12px;
+            font: {
+                size: 18px;
+                weight: 500;
+                family: var(--headingFontFamily);
+            };
+        }
+        h3 {
+            margin-bottom: 0;
+            color: var(--whiteColor);
+            font: {
+                size: 30px;
+                weight: 600;
+            };
+        }
+    }
+    .form-content {
+        background-color: var(--whiteColor);
+        border-radius: 0 0 15px 15px;
+        padding: 50px 30px 40px;
+        max-width: 490px;
+        margin: auto;
+
+        .form-group {
+            position: relative;
+            margin-bottom: 35px;
+
+            &.zero {
+                margin-bottom: 0;
+            }
+            label {
+                background-color: var(--whiteColor);
+                border: 1px solid #E5E5E5;
+                border-radius: 5px;
+                position: absolute;
+                padding: 5px 10px;
+                display: block;
+                left: 20px;
+                top: -10px;
+                z-index: 1;
+                font: {
+                    family: var(--headingFontFamily);
+                    weight: 500;
+                };
+            }
+            .form-control {
+                height: auto;
+                line-height: unset;
+                border-radius: 5px;
+                color: var(--blackColor);
+                border: 1px solid #E5E5E5;
+                padding: 38px 100px 12px 20px;
+                background-color: var(--whiteColor);
+                font: {
+                    family: var(--headingFontFamily);
+                    size: 16.5px;
+                    weight: 600;
+                };
+                &::placeholder {
+                    color: var(--blackColor);
+                }
+            }
+            .delivery-method {
+                border: 1px solid #E5E5E5;
+                border-radius: 5px;
+                padding: {
+                    top: 38px;
+                    left: 20px;
+                    right: 20px;
+                    bottom: 12px;
+                };
+                .form-select {
+                    padding: 0;
+                    border-width: 0;
+                    cursor: pointer;
+                    box-shadow: unset;
+                    color: var(--blackColor);
+                    background-position: right 0 center;
+                    font: {
+                        size: 16px;
+                        weight: 600;
+                        family: var(--headingFontFamily);
+                    };
+                }
+            }
+            .amount-currency-select {
+                position: absolute;
+                bottom: 15px;
+                right: 20px;
+
+                .form-select {
+                    cursor: pointer;
+                    box-shadow: unset;
+                    padding: 2px 20px 0 0;
+                    color: var(--blackColor);
+                    background-position: right 0 center;
+                    border: {
+                        width: 0;
+                        radius: 0;
+                    };
+                    font: {
+                        size: 16px;
+                        weight: 600;
+                        family: var(--headingFontFamily);
+                    };
+                }
+            }
+        }
+        .info {
+            margin: {
+                top: 18px;
+                bottom: 20px;
+            };
+            p {
+                font: {
+                    size: 16px;
+                    family: var(--headingFontFamily);
+                };
+                span {
+                    color: var(--blackColor);
+                    font-weight: 600;
+                }
+            }
+        }
+        .btn-primary {
+            width: 100%;
+            display: block;
+            padding: 20px 30px;
+            border-radius: 50px;
+            transition: var(--transition);
+            background: var(--secondaryGradientColor);
+            
+            &::before {
+                border-radius: 50px;
+                transition: var(--transition);
+                background: var(--secondaryGradientColor);
+            }
+            &::after {
+                border-radius: 50px;
+                background: var(--primaryGradientColor);
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .ctp-send-money-online-area {
+        margin: {
+            left: 0;
+            right: 0;
+        };
+    }
+    .ctp-send-money-online-content {
+        h1 {
+            font-size: 26px;
+        }
+    }
+    .ctp-send-money-online-form {
+        margin-top: 35px;
+
+        .form-header {
+            border-radius: 15px 15px 0 0;
+
+            h3 {
+                font-size: 22px;
+            }
+        }
+        .form-content {
+            padding: 50px 20px 40px;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .ctp-send-money-online-area {
+        margin: {
+            left: 0;
+            right: 0;
+        };
+    }
+    .ctp-send-money-online-form {
+        margin-top: 35px;
+        margin: 35px auto 0;
+
+        .form-header {
+            border-radius: 15px 15px 0 0;
+
+            h3 {
+                font-size: 22px;
+            }
+        }
+        .form-content {
+            padding: 50px 20px 40px;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .ctp-send-money-online-area {
+        margin: {
+            left: 0;
+            right: 0;
+        };
+    }
+    .ctp-send-money-online-form {
+        .form-header {
+            border-radius: 15px 15px 0 0;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .ctp-send-money-online-area {
+        margin: {
+            left: 120px;
+            right: 120px;
+        };
+    }
+
+}

@@ -1,0 +1,129 @@
+.subscribe-wrap-inner-box {
+    padding: 80px 50px;
+    border-radius: 20px;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+}
+.subscribe-wrap-box-content {
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.29);
+
+    .subscribe-content {
+        h3 {
+            font-size: 34px;
+            margin-bottom: 15px;
+            color: var(--whiteColor);
+        }
+        p {
+            color: var(--whiteColor);
+            margin-bottom: 0;
+        }
+    }
+    .newsletter-form {
+        position: relative;
+        padding-right: 180px;
+
+        .input-newsletter {
+            outline: 0;
+            width: 100%;
+            border: none;
+            height: 50px;
+            display: block;
+            padding-left: 18px;
+            border-radius: 5px;
+            color: var(--whiteColor);
+            background: rgba(0, 0, 0, 0.5);
+            font: {
+                size: 16px;
+                weight: 400;
+            };
+            &::placeholder {
+                color: var(--whiteColor);
+                transition: var(--transition);
+            }
+            &:focus {
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+        .btn-primary {
+            position: absolute;
+            border-radius: 5px;
+            height: 50px;
+            right: 0;
+            top: 0;
+            
+            &::before {
+                background: var(--blackColor);
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .subscribe-wrap-inner-box {
+        padding: 50px 20px;
+    }
+    .subscribe-wrap-box-content {
+        padding: 15px;
+
+        .subscribe-content {
+            margin-bottom: 25px;
+
+            h3 {
+                font-size: 25px;
+            }  
+        }      
+        .newsletter-form {
+            padding-right: 0;
+
+            .btn-primary {
+                position: relative;
+                margin-top: 10px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .subscribe-wrap-inner-box {
+        padding: 50px 20px;
+    }
+    .subscribe-wrap-box-content {
+        .subscribe-content {
+            margin-bottom: 25px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .subscribe-wrap-inner-box {
+        padding: 60px 25px;
+    }
+    .subscribe-wrap-box-content {
+        padding: 15px;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

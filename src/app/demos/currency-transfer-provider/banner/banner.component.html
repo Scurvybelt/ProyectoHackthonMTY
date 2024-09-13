@@ -1,0 +1,106 @@
+<div class="ctp-banner-area">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-12">
+                <div class="ctp-banner-content">
+                    <h1>International currency <span>transfer</span> provider</h1>
+                    <ul class="ctp-list">
+                        <li> 
+                            <img src="images/currency-transfer-provider/banner/circle-check.svg" alt="image"> 
+                            Great exchange rates
+                        </li>
+                        <li>
+                            <img src="images/currency-transfer-provider/banner/circle-check.svg" alt="image"> 
+                            No hidden fees
+                        </li>
+                        <li>
+                            <img src="images/currency-transfer-provider/banner/circle-check.svg" alt="image"> 
+                            24/7 Transfers
+                        </li>
+                        <li>
+                            <img src="images/currency-transfer-provider/banner/circle-check.svg" alt="image"> 
+                            5-star customer rating
+                        </li>
+                        <li>
+                            <img src="images/currency-transfer-provider/banner/circle-check.svg" alt="image"> 
+                            Award-winning service
+                        </li>
+                    </ul>
+                    <div class="video-view">
+                        <button type="button" class="video-btn popup-youtube border-0 bg-transparent" (click)="openPopup()">
+                            <i class="fas fa-play"></i>
+                            <span>See how it works</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <form class="ctp-banner-form">
+                    <div class="form-header">
+                        <span>Exchange Rate</span>
+                        <h3>1 GBP = 1.29356 USD</h3>
+                    </div>
+                    <div class="form-content">
+                        <div class="form-group">
+                            <label>Delivery Method</label>
+                            <div class="delivery-method">
+                                <select class="form-select">
+                                    <option>Bank Transfer</option>
+                                    <option>Send Money</option>
+                                    <option>Interest Money</option>
+                                    <option>Invest Money</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>You Transfer</label>
+                            <input type="text" class="form-control" autocomplete="off" value="100">
+                            <div class="amount-currency-select">
+                                <select class="form-select">
+                                    <option>GBP</option>
+                                    <option>USD</option>
+                                    <option>EUR</option>
+                                    <option>BRL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group zero">
+                            <label>Recipient Gets</label>
+                            <input type="text" class="form-control" autocomplete="off" value="129.35">
+                            <div class="amount-currency-select">
+                                <select class="form-select">
+                                    <option>USD</option>
+                                    <option>GBP</option>
+                                    <option>EUR</option>
+                                    <option>BRL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p><span>Delivery Time:</span> 1 Working Days</p>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div
+        class="bg-image"
+        style="background-image: url(images/currency-transfer-provider/banner/banner-bg.jpg);"
+        [ngStyle]="{'background-position-y': backgroundPositionY + 'px'}"
+    ></div>
+</div>
+
+<!-- Video Popup -->
+<div
+    class="video-popup position-fixed d-flex align-items-center justify-content-center text-center top-0 start-0 end-0 bottom-0"
+    *ngIf="isOpen"
+>
+    <div class="popup-inner bg-white position-relative mx-auto">
+        <iframe src="https://www.youtube.com/embed/YDXQ_nociO4" title="Web Design Trends 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button (click)="closePopup()" type="button" class="close-btn p-0 border-0 d-flex align-items-center justify-content-center rounded-circle">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+</div>

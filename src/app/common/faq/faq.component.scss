@@ -1,0 +1,117 @@
+.ctp-faq-accordion {
+    max-width: 1095px;
+    margin: auto;
+
+    .faq-item {
+        box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05);
+        background-color: var(--whiteColor);
+        border-radius: 15px;
+        margin-bottom: 15px;
+
+        .faq-header {
+            cursor: pointer;
+            color: var(--blackColor);
+            padding: 20px 75px 20px 30px;
+            font: {
+                size: 20px;
+                family: var(--headingFontFamily);
+            };
+            i {
+                top: 50%;
+                right: 30px;
+                font-size: 16px;
+                position: absolute;
+                transform: translateY(-50%);
+                color: var(--secondaryColor);
+
+                &.fa-circle-up {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+        .faq-content {
+            padding: 0 30px 30px 30px;
+
+            p {
+                font: {
+                    family: var(--headingFontFamily);
+                    size: 16px;
+                };
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .ctp-faq-accordion {
+        max-width: 100%;
+    
+        .faq-item {
+            border-radius: 5px;
+    
+            .faq-header {
+                padding: 15px 45px 15px 20px;
+                font-size: 16px;
+                
+                i {
+                    right: 20px;
+                    font-size: 15px;
+                }
+            }
+            .faq-content {
+                padding: 0 20px 15px 20px;
+    
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .ctp-faq-accordion {
+        max-width: 100%;
+    
+        .faq-item {
+            border-radius: 10px;
+    
+            .faq-header {
+                padding: 20px 55px 20px 25px;
+                font-size: 18px;
+
+                i {
+                    right: 25px;
+                }
+            }
+            .faq-content {
+                padding: 0 25px 20px 25px;
+    
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

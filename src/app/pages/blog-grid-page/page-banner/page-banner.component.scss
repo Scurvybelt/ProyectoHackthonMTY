@@ -1,0 +1,148 @@
+.page-title-area {
+    z-index: 1;
+    position: relative;
+    background: {
+        color: var(--blackColor);
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    padding: {
+        top: 200px;
+        bottom: 120px;
+    };
+    &::before {
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        z-index: -1;
+        opacity: .60;
+        height: 100%;
+        position: absolute;
+        background: #000000;
+    }
+    &::after {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: .04;
+        height: 100%;
+        position: absolute;
+        background: {
+            image: url(../../../../../public/images/bg_lines.svg);
+            repeat: no-repeat;
+            position: center;
+            size: 200%;
+        };
+    }
+    .bg-image {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2;
+        position: absolute;
+        background: {
+            position: center center;
+            repeat: no-repeat;
+            size: cover;
+        };
+    }
+}
+.page-title-content {
+    text-align: center;
+
+    h2 {
+        color: var(--whiteColor);
+        max-width: 700px;
+        margin: {
+            bottom: 0;
+            left: auto;
+            right: auto;
+        };
+        font: {
+            size: 40px;
+            weight: 500;
+        };
+    }
+    p {
+        color: var(--whiteColor);
+        max-width: 600px;
+        font: {
+            family: var(--headingFontFamily);
+        };
+        margin: {
+            top: 10px;
+            bottom: 0;
+            left: auto;
+            right: auto;
+        };
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .page-title-area {
+        padding: {
+            top: 135px;
+            bottom: 60px;
+        };
+    }
+    .page-title-content {
+        h2 {
+            font-size: 27px;
+            max-width: 100%;
+            margin: {
+                left: 0;
+                right: 0;
+            };
+        }
+        p {
+            font-size: 13px;
+            max-width: 100%;
+            margin: {
+                left: 0;
+                right: 0;
+            };
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .page-title-area {
+        padding: {
+            top: 160px;
+            bottom: 80px;
+        };
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .page-title-area {
+        padding: {
+            top: 180px;
+            bottom: 100px;
+        };
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

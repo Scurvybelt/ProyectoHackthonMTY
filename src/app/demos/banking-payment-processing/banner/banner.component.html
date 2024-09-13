@@ -1,0 +1,18 @@
+<div class="main-banner position-relative z-1" (window:scroll)="onWindowScroll()">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="main-banner-content">
+                    <h1>Easy, fee-free banking for entrepreneurs</h1>
+                    <p>Get the financial tools and insights to start, build, and grow your business.</p>
+                    <a routerLink="/contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        class="bg-image"
+        style="background-image: url(images/main-banner1.jpg);"
+        [ngStyle]="{'background-position-y': backgroundPositionY + 'px'}"
+    ></div>
+</div>

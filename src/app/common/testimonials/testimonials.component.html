@@ -1,0 +1,90 @@
+<div class="feedback-area ptb-70 bg-f7fafd">
+    <div class="container">
+        <div class="section-title">
+            <h2>What customers say about Us</h2>
+            <div class="bar"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="feedback-slides">
+            <div class="tab-content">
+                <div class="tab-pane fade" *ngIf="currentTab === 'tab1'">
+                    <div class="single-feedback">
+                        <div class="client-img">
+                            <img src="images/client-image/client1.jpg" alt="image">
+                        </div>
+                        <h3>John Lucy</h3>
+                        <span>Web Developer</span>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" *ngIf="currentTab === 'tab2'">
+                    <div class="single-feedback">
+                        <div class="client-img">
+                            <img src="images/client-image/client2.jpg" alt="image">
+                        </div>
+                        <h3>John Smith</h3>
+                        <span>Web Developer</span>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" *ngIf="currentTab === 'tab3'">
+                    <div class="single-feedback">
+                        <div class="client-img">
+                            <img src="images/client-image/client3.jpg" alt="image">
+                        </div>
+                        <h3>Maxwel Warner</h3>
+                        <span>Web Developer</span>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" *ngIf="currentTab === 'tab4'">
+                    <div class="single-feedback">
+                        <div class="client-img">
+                            <img src="images/client-image/client4.jpg" alt="image">
+                        </div>
+                        <h3>Ross Taylor</h3>
+                        <span>Web Developer</span>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" *ngIf="currentTab === 'tab5'">
+                    <div class="single-feedback">
+                        <div class="client-img">
+                            <img src="images/client-image/client5.jpg" alt="image">
+                        </div>
+                        <h3>James Anderson</h3>
+                        <span>Web Developer</span>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item" [ngClass]="{'active': currentTab === 'tab1'}">
+                    <button class="nav-link" type="button" (click)="switchTab($event, 'tab1')">
+                        <img src="images/client-image/client1.jpg" alt="client">
+                    </button>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': currentTab === 'tab2'}">
+                    <button class="nav-link" type="button" (click)="switchTab($event, 'tab2')">
+                        <img src="images/client-image/client2.jpg" alt="client">
+                    </button>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': currentTab === 'tab3'}">
+                    <button class="nav-link" type="button" (click)="switchTab($event, 'tab3')">
+                        <img src="images/client-image/client3.jpg" alt="client">
+                    </button>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': currentTab === 'tab4'}">
+                    <button class="nav-link" type="button" (click)="switchTab($event, 'tab4')">
+                        <img src="images/client-image/client4.jpg" alt="client">
+                    </button>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': currentTab === 'tab5'}">
+                    <button class="nav-link" type="button" (click)="switchTab($event, 'tab5')">
+                        <img src="images/client-image/client5.jpg" alt="client">
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

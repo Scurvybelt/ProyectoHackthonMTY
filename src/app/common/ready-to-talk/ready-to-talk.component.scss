@@ -1,0 +1,149 @@
+// Ready to Talk
+.ready-to-talk {
+    text-align: center;
+    position: relative;
+    background: var(--secondaryGradientColor);
+    padding: {
+        top: 70px;
+        bottom: 145px;
+    };
+}
+.ready-to-talk-content {
+    h3 {
+        text-transform: capitalize;
+        color: var(--whiteColor);
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+    p {
+        color: var(--whiteColor);
+        margin-bottom: 20px;
+    }
+    .btn-primary {
+        &::after {
+            background: var(--whiteColor);
+        }
+        &:hover, &:focus {
+            color: var(--primaryColor) !important;
+        }
+    }
+    span {
+        a {
+            margin-left: 15px;
+            color: var(--whiteColor);
+            text-decoration: underline;
+        }
+    }
+}
+
+// Partner
+.partner-area {
+    text-align: center;
+    position: relative;
+    margin-top: -120px;
+    background: transparent;
+
+    h3 {
+        color: var(--whiteColor);
+        margin-bottom: 0;
+        font-size: 22px;
+    }
+}
+.partner-inner {
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+    background: var(--whiteColor);
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 20px;
+    padding: {
+        top: 5px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+    };
+    a {
+        display: block;
+        margin-top: 25px;
+        position: relative;
+
+        img {
+            transition: var(--transition);
+
+            &:nth-child(2) {
+                left: 0;
+                right: 0;
+                top: 15px;
+                opacity: 0;
+                margin: 0 auto;
+                visibility: hidden;
+                position: absolute;
+            }
+        }
+        &:hover {
+            img {
+                &:nth-child(1) {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &:nth-child(2) {
+                    opacity: 1;
+                    top: 0;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    // Ready to Talk
+    .ready-to-talk {
+        padding-top: 60px;
+    }
+    .ready-to-talk-content {
+        h3 {
+            font-size: 26px;
+        }
+        span {
+            display: block;
+            margin-top: 10px;
+
+            a {
+                margin-left: 0;
+            }
+        }
+    }
+
+    // Partner
+    .partner-area {
+        h3 {
+            font-size: 19px;
+            line-height: 1.4;
+        }
+    }
+    .partner-inner {
+        margin-top: 15px;
+        padding: {
+            left: 20px;
+            right: 20px;
+        };
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

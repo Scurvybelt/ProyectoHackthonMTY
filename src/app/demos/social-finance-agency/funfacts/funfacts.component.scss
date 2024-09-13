@@ -1,0 +1,107 @@
+@import '../../../common/funfacts/funfacts.component';
+
+.funfacts-style-area {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        background: var(--whiteColor);
+        position: absolute;
+        content: "";
+        height: 50%;
+        width: 100%;
+        z-index: -1;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
+    &::after {
+        background: #F5F5F5;
+        position: absolute;
+        content: "";
+        height: 50%;
+        width: 100%;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+.funfacts-style-inner-box {
+    border-radius: 20px;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    padding: {
+        left: 50px;
+        right: 50px;
+    };
+    .funfact {
+        h3 {
+            color: var(--whiteColor);
+        }
+        p {
+            color: var(--whiteColor);
+        }
+    }
+    .contact-cta-box {
+        max-width: 800px;
+        border: 1px solid rgba(255, 255, 255, 0.29);
+
+        h3 {
+            color: var(--whiteColor);
+        }
+        p {
+            color: var(--whiteColor);
+        }
+        .btn-primary {
+            &::before {
+                background: var(--blackColor);
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .funfacts-style-area {
+        padding-top: 60px;
+    }
+    .funfacts-style-inner-box {
+        padding: {
+            left: 15px;
+            right: 15px;
+        };
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .funfacts-style-area {
+        padding-top: 70px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .funfacts-style-area {
+        padding-top: 70px;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

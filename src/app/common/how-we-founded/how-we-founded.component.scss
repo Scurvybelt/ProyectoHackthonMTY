@@ -1,0 +1,118 @@
+.about-content {
+    padding-right: 25px;
+
+    span {
+        display: block;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: var(--primaryColor);
+        font: {
+            family: var(--headingFontFamily);
+            size: 12.5px;
+            weight: 700;
+        }
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        line-height: 1.8;
+        margin: {
+            bottom: 0;
+            top: 12px;
+        };
+    }
+}
+.about-image {
+    position: relative;
+
+    .video-btn {
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        font-size: 23px;
+        line-height: 61px;
+        position: absolute;
+        text-align: center;
+        border-radius: 50%;
+        color: var(--whiteColor);
+        background: var(--secondaryGradientColor);
+        transform: translateX(-50%) translateY(-50%);
+
+        &::after {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: -1;
+            content: '';
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            background: rgba(255, 255, 255, .5);
+            animation: ripple 1.9s ease-out infinite;
+        }
+        &::before {
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            content: '';
+            height: 100%;
+            border-radius: 50%;
+            position: absolute;
+            transition: var(--transition);
+            background: var(--primaryGradientColor);
+        }
+        &:hover {
+            &::before {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .about-content {
+        padding-right: 0;
+
+        span {
+            font-size: 11px;
+        }
+        h2 {
+            font-size: 26px;
+        }
+    }
+    .about-image {
+        margin-top: 30px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .about-content {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

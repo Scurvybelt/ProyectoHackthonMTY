@@ -1,0 +1,368 @@
+.main-banner-section {
+    height: 800px;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    .bg-image {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        position: absolute;
+        background: {
+            position: center center;
+            repeat: no-repeat;
+            size: cover;
+        };
+    }
+}
+.banner-content {
+    margin-top: -50px;
+
+    h1 {
+        color: var(--whiteColor);
+        margin-bottom: 0;
+        font-size: 52px;
+    }
+    p {
+        color: var(--whiteColor);
+        max-width: 400px;
+        font: {
+            family: var(--headingFontFamily);
+            size: 18px;
+        };
+        margin: {
+            top: 20px;
+            bottom: 0;
+        };
+    }
+    .btn {
+        margin-top: 30px;
+    }
+}
+.money-transfer-form {
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+    background-color: var(--whiteColor);
+    position: relative;
+    border-radius: 5px;
+    padding: 30px;
+    z-index: 1;
+    margin: {
+        top: -50px;
+        left: 100px;
+    };
+    &::before {
+        left: 0;
+        right: 0;
+        width: 96%;
+        content: '';
+        z-index: -1;
+        height: 50%;
+        opacity: .62;
+        margin: auto;
+        bottom: -10px;
+        position: absolute;
+        border-radius: 3px;
+        background: var(--whiteColor);
+    }
+    &::after {
+        left: 0;
+        right: 0;
+        width: 96%;
+        top: -10px;
+        content: '';
+        z-index: -1;
+        height: 50%;
+        opacity: .62;
+        margin: auto;
+        position: absolute;
+        border-radius: 3px;
+        background: var(--whiteColor);
+    }
+    form {
+        text-align: center;
+
+        .form-group {
+            position: relative;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 36px 10px 12px 15px;
+            background: var(--primaryGradientColor);
+
+            .amount-currency-select {
+                top: 0;
+                right: 0;
+                height: 100%;
+                position: absolute;
+
+                &::before {
+                    top: 50%;
+                    right: 20px;
+                    content: "\f078";
+                    margin-top: -1.5px;
+                    position: absolute;
+                    pointer-events: none;
+                    color: var(--whiteColor);
+                    transform: translateY(-50%);
+                    font: {
+                        size: 10px;
+                        family: "FontAwesome";
+                    };
+                }
+            }
+            .form-select {
+                background: var(--blackColor);
+                border-radius: 0 5px 5px 0;
+                color: var(--whiteColor);
+                padding: 0 35px 0 25px;
+                box-shadow: unset;
+                cursor: pointer;
+                border-width: 0;
+                height: 100%;
+                font: {
+                    size: 17px;
+                    weight: 700;
+                };
+            }
+            label {
+                position: absolute;
+                color: #f9f9f9;
+                margin-bottom: 0;
+                display: block;
+                left: 15px;
+                top: 10px;
+                font: {
+                    weight: 300;
+                    size: 13.5px;
+                };
+            }
+            .form-control {
+                border: none;
+                height: auto;
+                padding-left: 0;
+                padding-right: 95px;
+                line-height: initial;
+                color: var(--whiteColor);
+                background-color: transparent;
+                font: {
+                    size: 17px;
+                    weight: 500;
+                };
+                &::placeholder {
+                    color: var(--whiteColor);
+                }
+            }
+        }
+        .currency-info {
+            text-align: start;
+            position: relative;
+            margin: {
+                bottom: 25px;
+                top: 25px;
+            };
+            padding: {
+                top: 5px;
+                left: 20px;
+                bottom: 5px;
+            };
+            .bar {
+                left: 0;
+                top: 50%;
+                width: 2px;
+                height: 100%;
+                position: absolute;
+                transform: translateY(-50%);
+                background: var(--primaryGradientColor);
+
+                &::before {
+                    top: -1px;
+                    left: -2px;
+                    width: 6px;
+                    height: 6px;
+                    content: '';
+                    border-radius: 50%;
+                    position: absolute;
+                    background: var(--primaryGradientColor);
+                }
+                &::after {
+                    left: -2px;
+                    width: 6px;
+                    height: 6px;
+                    content: '';
+                    bottom: -1px;
+                    position: absolute;
+                    border-radius: 50%;
+                    background: var(--primaryGradientColor);
+                }
+            }
+            span {
+                color: var(--bodyColor);
+                display: inline-block;
+                font-size: 14px;
+
+                strong {
+                    color: var(--blackColor);
+                }
+                &:last-child {
+                    margin-left: 15px;
+                }
+            }
+        }
+        .money-transfer-info {
+            color: var(--bodyColor);
+            font-size: 14px;
+
+            strong {
+                display: block;
+                margin-top: 3px;
+                font-size: 16px;
+                color: var(--blackColor);
+            }
+        }
+        button {
+            margin-top: 15px;
+        }
+        .btn {
+            &::before {
+                background: var(--secondaryGradientColor);
+            }
+            &::after {
+                background: var(--primaryGradientColor);
+            }
+        }
+        .terms-info {
+            margin-top: 15px;
+
+            p {
+                font-size: 14px;
+
+                a {
+                    display: inline-block;
+                    color: var(--blackColor);
+
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .main-banner-section {
+        height: auto;
+        padding: {
+            top: 160px;
+            bottom: 230px;
+        };
+    }
+    .banner-content {
+        margin-top: 0;
+        text-align: center;
+
+        h1 {
+            font-size: 35px;
+            line-height: 1.3;
+        }
+        p {
+            font-size: 15px;
+            max-width: 100%;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        .btn {
+            margin-top: 25px;
+        }
+    }
+    .money-transfer-form {
+        padding: 30px 20px;
+        margin: {
+            top: 60px;
+            left: 0;
+        };
+        form {
+            .currency-info {
+                margin: {
+                    bottom: 20px;
+                    top: 20px;
+                };
+                padding: {
+                    left: 15px;
+                };
+                span {
+                    display: block;
+
+                    &:last-child {
+                        margin: {
+                            left: 0;
+                            top: 6px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .main-banner-section {
+        height: auto;
+        padding: {
+            top: 165px;
+            bottom: 220px;
+        };
+    }
+    .banner-content {
+        margin-top: 0;
+        text-align: center;
+
+        p {
+            margin: {
+                left: auto;
+                right: auto;
+            };
+        }
+    }
+    .money-transfer-form {
+        max-width: 550px;
+        margin: {
+            left: auto;
+            right: auto;
+            top: 50px;
+        };
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .money-transfer-form {
+        margin-left: 20px;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .main-banner-section {
+        height: 100vh;
+    }
+
+}

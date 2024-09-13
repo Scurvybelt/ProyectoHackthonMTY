@@ -1,0 +1,109 @@
+<div class="ctp-key-features-area ptb-70">
+    <div class="container">
+        <div class="section-title">
+            <h2>Money transfer company key features</h2>
+        </div>
+        <div class="ctp-key-features-tabs">
+            <ul class="nav nav-tabs">
+                <li class="nav-item" [ngClass]="{'active': currentTab === 'tab1'}">
+                    <button class="nav-link" type="button" (click)="switchTab($event, 'tab1')">
+                        Security
+                    </button>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': currentTab === 'tab2'}">
+                    <button class="nav-link" type="button" (click)="switchTab($event, 'tab2')">
+                        Cost
+                    </button>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': currentTab === 'tab3'}">
+                    <button class="nav-link" type="button" (click)="switchTab($event, 'tab3')">
+                        Speed
+                    </button>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': currentTab === 'tab4'}">
+                    <button class="nav-link" type="button" (click)="switchTab($event, 'tab4')">
+                        Accessibility
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade" *ngIf="currentTab === 'tab1'">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-12">
+                            <div class="ctp-key-features-image" style="background-image: url(images/currency-transfer-provider/key-features.jpg);"></div>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="ctp-key-features-content">
+                                <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. pretium ut lacinia in, elementum id enim.</p>
+                                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. pellentesque in ipsum id orci porta dapibus. curabitur non nulla sit amet nisl tempus convallis quis ac lectus. quisque velit nisi elementum id enim.</p>
+                                <ul class="list">
+                                    <li><i class="fa-solid fa-check"></i> Quisque velit nisi, pretium ut lacinia in, elementum id enim.</li>
+                                    <li><i class="fa-solid fa-check"></i> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet.</li>
+                                    <li><i class="fa-solid fa-check"></i> Donec rutrum congue leo eget malesuada.</li>
+                                    <li><i class="fa-solid fa-check"></i> Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" *ngIf="currentTab === 'tab2'">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-12">
+                            <div class="ctp-key-features-image" style="background-image: url(images/currency-transfer-provider/key-features.jpg);"></div>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="ctp-key-features-content">
+                                <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. pretium ut lacinia in, elementum id enim.</p>
+                                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. pellentesque in ipsum id orci porta dapibus. curabitur non nulla sit amet nisl tempus convallis quis ac lectus. quisque velit nisi elementum id enim.</p>
+                                <ul class="list">
+                                    <li><i class="fa-solid fa-check"></i> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet.</li>
+                                    <li><i class="fa-solid fa-check"></i> Quisque velit nisi, pretium ut lacinia in, elementum id enim.</li>
+                                    <li><i class="fa-solid fa-check"></i> Donec rutrum congue leo eget malesuada.</li>
+                                    <li><i class="fa-solid fa-check"></i> Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" *ngIf="currentTab === 'tab3'">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-12">
+                            <div class="ctp-key-features-image" style="background-image: url(images/currency-transfer-provider/key-features.jpg);"></div>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="ctp-key-features-content">
+                                <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. pretium ut lacinia in, elementum id enim.</p>
+                                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. pellentesque in ipsum id orci porta dapibus. curabitur non nulla sit amet nisl tempus convallis quis ac lectus. quisque velit nisi elementum id enim.</p>
+                                <ul class="list">
+                                    <li><i class="fa-solid fa-check"></i> Quisque velit nisi, pretium ut lacinia in, elementum id enim.</li>
+                                    <li><i class="fa-solid fa-check"></i> Donec rutrum congue leo eget malesuada.</li>
+                                    <li><i class="fa-solid fa-check"></i> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet.</li>
+                                    <li><i class="fa-solid fa-check"></i> Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" *ngIf="currentTab === 'tab4'">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-12">
+                            <div class="ctp-key-features-image" style="background-image: url(images/currency-transfer-provider/key-features.jpg);"></div>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="ctp-key-features-content">
+                                <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. pretium ut lacinia in, elementum id enim.</p>
+                                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. pellentesque in ipsum id orci porta dapibus. curabitur non nulla sit amet nisl tempus convallis quis ac lectus. quisque velit nisi elementum id enim.</p>
+                                <ul class="list">
+                                    <li><i class="fa-solid fa-check"></i> Quisque velit nisi, pretium ut lacinia in, elementum id enim.</li>
+                                    <li><i class="fa-solid fa-check"></i> Vestibulum ac diam sit amet quam vehicula elementum sed sit amet.</li>
+                                    <li><i class="fa-solid fa-check"></i> Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</li>
+                                    <li><i class="fa-solid fa-check"></i> Donec rutrum congue leo eget malesuada.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>

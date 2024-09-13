@@ -1,0 +1,100 @@
+.about-image {
+    padding-right: 130px;
+    position: relative;
+    text-align: start;
+
+    img {
+        &:nth-child(2) {
+            transform: translateY(-50%);
+            position: absolute;
+            right: 50px;
+            top: 50%;
+        }
+    }
+}
+.about-content {
+    h2 {
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+    .btn {
+        margin-top: 10px;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .about-image {
+        padding-right: 0;
+        margin-bottom: 30px;
+
+        img {
+            width: 100%;
+
+            &:nth-child(2) {
+                top: 0;
+                right: 0;
+                margin-top: 15px;
+                position: relative;
+                transform: translateY(0);
+            }
+        }
+    }
+    .about-content {
+        padding-left: 0;
+        text-align: center;
+
+        h2 {
+            font-size: 27px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .about-image {
+        padding-right: 100px;
+
+        img {
+            width: auto;
+
+            &:nth-child(2) {
+                top: 50%;
+                margin-top: 0;
+                position: absolute;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .about-image {
+        max-width: 535px;
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: 35px;
+        };
+    }
+    .about-content {
+        padding-left: 0;
+        text-align: center;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

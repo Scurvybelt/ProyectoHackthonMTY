@@ -1,0 +1,126 @@
+.ctp-services-card {
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05);
+    background-color: var(--whiteColor);
+    transition: var(--transition);
+    border-radius: 15px;
+    margin-bottom: 25px;
+    padding: 25px;
+
+    h3 {
+        font-size: 20px;
+        position: relative;
+        margin-bottom: 16.5px;
+        padding: 10.5px 0 10.5px 65px;
+        
+        .icon {
+            left: 0;
+            top: 50%;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            font-size: 15px;
+            line-height: 50px;
+            text-align: center;
+            position: absolute;
+            border-radius: 50px;
+            display: inline-block;
+            color: var(--whiteColor);
+            transform: translateY(-50%);
+            transition: var(--transition);
+            background: var(--primaryGradientColor);
+            
+            &::before {
+                top: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                width: 50px;
+                content: "";
+                z-index: -1;
+                height: 50px;
+                line-height: 50px;
+                position: absolute;
+                visibility: hidden;
+                border-radius: 50px;
+                display: inline-block;
+                transition: var(--transition);
+                background: var(--secondaryGradientColor);
+            }
+            img {
+                left: 0;
+                right: 0;
+                top: 50%;
+                margin: auto;
+                position: absolute;
+                transform: translateY(-50%);
+            }
+        }
+        &:hover {
+            .icon {
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    p {
+        margin-bottom: 0;
+        font: {
+            family: var(--headingFontFamily);
+            size: 16px;
+        };
+    }
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .ctp-services-card {
+        padding: 20px;
+
+        h3 {
+            padding: 14.5px 0 14.5px 60px;
+            font-size: 16.5px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .ctp-services-card {
+        h3 {
+            padding: 2.5px 0 2.5px 65px;
+        }
+    }
+
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .ctp-services-card {
+        padding: 20px;
+
+        h3 {
+            font-size: 18px;
+            padding: 14.5px 0 14.5px 62px;
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

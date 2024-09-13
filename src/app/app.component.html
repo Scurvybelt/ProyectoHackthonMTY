@@ -1,0 +1,13 @@
+<div
+    [ngClass]="{'withou-navbar-footer': router.url === '/signin' || router.url === '/signup'}"
+>
+
+    <app-navbar />
+
+    <router-outlet />
+
+    <app-footer />
+
+    <app-back-to-top />
+
+</div>

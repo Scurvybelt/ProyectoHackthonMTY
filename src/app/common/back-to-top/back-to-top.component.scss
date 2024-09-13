@@ -1,0 +1,65 @@
+.back-to-top {
+    top: 98%;
+	z-index: 4;
+	right: 15px;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	cursor: pointer;
+    line-height: 40px;
+	text-align: center;
+    color: var(--whiteColor);
+    transform: translateY(-98%);
+    transition: var(--transition);
+	background: var(--primaryGradientColor);
+
+    &::before {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        content: '';
+        width: 100%;
+        z-index: -1;
+        height: 100%;
+        visibility: hidden;
+        position: absolute;
+        transition: var(--transition);
+        background: var(--secondaryGradientColor);
+    }
+    &:hover {
+        color: var(--whiteColor);
+
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    // Back to Top
+    .back-to-top {
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

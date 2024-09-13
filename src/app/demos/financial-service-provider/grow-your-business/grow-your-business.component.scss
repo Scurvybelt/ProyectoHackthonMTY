@@ -1,0 +1,92 @@
+.business-area {
+    background-color: #051947;
+}
+.business-content {
+    h2 {
+        color: var(--whiteColor);
+        margin-bottom: 0;
+        font-size: 40px;
+    }
+    .single-business-box {
+        margin-top: 35px;
+
+        h3 {
+            color: var(--whiteColor);
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+        p {
+            color: var(--whiteColor);
+            opacity: 0.9;
+        }
+    }
+}
+.business-image {
+    padding: 50px;
+    margin-left: 50px;
+    text-align: center;
+    background: linear-gradient(125deg, #FDFF9C 0%, #0500FF 100%), linear-gradient(180deg, #D3D3D3 0%, #161616 100%), linear-gradient(310deg, #00F0FF 0%, #00F0FF 20%, #0017E3 calc(20% + 1px), #0017E3 40%, #000F8F calc(40% + 1px), #000F8F 70%, #00073F calc(70% + 1px), #00073F 100%), linear-gradient(285deg, #FFB6B9 0%, #FFB6B9 35%, #FAE3D9 calc(35% + 1px), #FAE3D9 45%, #BBDED6 calc(45% + 1px), #BBDED6 65%, #61C0BF calc(65% + 1px), #61C0BF 100%);
+    background-blend-mode: overlay, overlay, exclusion, normal;
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .business-content {
+        text-align: center;
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: 27px;
+        }
+        .single-business-box {
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+    .business-image {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .business-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .business-image {
+        margin-left: 0;
+        padding: 35px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .business-content {
+        .single-business-box {
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+    .business-image {
+        padding: 30px;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

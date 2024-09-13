@@ -1,0 +1,194 @@
+.currency-transfer-provider-with-background-color {
+    background-color: #F4F7F9;
+}
+
+// Personal Currency Transfers
+.ctp-currency-image {
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+}
+.ctp-currency-content {
+    padding: {
+        top: 70px;
+        left: 80px;
+        bottom: 70px;
+    };
+    h3 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    p {
+        font: {
+            family: var(--headingFontFamily);
+            size: 16px;
+        };
+    }
+    .list {
+        padding: 0;
+        margin: {
+            top: 20px;
+            bottom: 0;
+        };
+        li {
+            color: var(--blackColor);
+            list-style-type: none;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            font: {
+                family: var(--headingFontFamily);
+                size: 20px;
+            };
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                position: absolute;
+                top: 3.5px;
+                left: 0;
+            }
+        }
+    }
+}
+
+// Receive money from all over the world
+.ctp-world-content {
+    padding: {
+        top: 100px;
+        right: 100px;
+        bottom: 100px;
+    };
+    h3 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    .world-inner-card {
+        margin-top: 30px;
+
+        h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        p {
+            font: {
+                family: var(--headingFontFamily);
+                size: 16px;
+            };
+        }
+    }
+}
+.ctp-world-image {
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    // Personal Currency Transfers
+    .ctp-currency-image {
+        height: 550px;
+    }
+    .ctp-currency-content {
+        padding: {
+            top: 35px;
+            bottom: 0;
+            left: 0;
+        };
+        h3 {
+            font-size: 26px;
+        }
+        .list {
+            li {
+                font-size: 16px;
+
+                img {
+                    top: 0.5px;
+                }
+            }
+        }
+    }
+
+    // Receive money from all over the world
+    .ctp-world-content {
+        padding: {
+            top: 0;
+            right: 0;
+            bottom: 35px;
+        };
+        h3 {
+            font-size: 26px;
+        }
+    }
+    .ctp-world-image {
+        height: 550px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    // Personal Currency Transfers
+    .ctp-currency-image {
+        height: 650px;
+    }
+    .ctp-currency-content {
+        padding: {
+            top: 35px;
+            bottom: 0;
+            left: 0;
+        };
+    }
+
+    // Receive money from all over the world
+    .ctp-world-content {
+        padding: {
+            top: 0;
+            right: 0;
+            bottom: 35px;
+        };
+    }
+    .ctp-world-image {
+        height: 650px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    // Personal Currency Transfers
+    .ctp-currency-content {
+        padding-left: 20px;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    // Personal Currency Transfers
+    .ctp-currency-content {
+        padding-left: 40px;
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

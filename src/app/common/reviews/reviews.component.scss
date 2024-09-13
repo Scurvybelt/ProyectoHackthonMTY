@@ -1,0 +1,86 @@
+.single-testimonials-box {
+    box-shadow: 5px 5px #8b98b5;
+    transition: var(--transition);
+    border: 1px solid #8b98b5;
+    margin-bottom: 25px;
+    padding: 30px;
+
+    .rating {
+        margin-bottom: 15px;
+
+        i {
+            font-size: 15px;
+            color: #ffc107;
+            margin-right: 1px;
+        }
+    }
+    p {
+        margin: 0;
+        color: #374d7f;
+        font: {
+            size: 15px;
+            weight: 400;
+        };
+    }
+    h3 {
+        color: var(--blackColor);
+        font-size: 15px;
+        margin: {
+            top: 20px;
+            bottom: 0;
+        };
+        font: {
+            size: 15px;
+            weight: 600;
+        };
+        span {
+            font-weight: 400;
+            margin-left: 5px;
+            display: inline-block;
+            color: var(--bodyColor);
+        }
+    }
+    &:hover {
+        box-shadow: 5px 5px var(--blackColor);
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .single-testimonials-box {
+        padding: 25px;
+
+        p {
+            font-size: 14px;
+        }
+        h3 {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .single-testimonials-box {
+        h3 {
+            font-size: 14px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

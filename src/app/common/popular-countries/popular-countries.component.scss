@@ -1,0 +1,26 @@
+.ctp-countries-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border-radius: 100px;
+    padding: 10px 20px 10px 10px;
+    transition: var(--transition);
+    background-color: var(--whiteColor);
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05);
+    
+    img {
+        margin-right: 10px;
+        max-width: 40px;
+    }
+    span {
+        color: var(--blackColor);
+        font: {
+            size: 16px;
+            weight: 400;
+            family: var(--headingFontFamily);
+        };
+    }
+    &:hover {
+        transform: translateY(-5px);
+    }
+}

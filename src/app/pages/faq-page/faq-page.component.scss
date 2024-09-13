@@ -1,0 +1,173 @@
+.faq-content {
+    h2 {
+        margin-bottom: 0;
+        font-size: 40px;
+    }
+    .bar {
+        height: 5px;
+        width: 90px;
+        position: relative;
+        margin: 20px 0 25px;
+        border-radius: 30px;
+        background: #cdf1d8;
+
+        &::before {
+            left: 0;
+            width: 10px;
+            top: -2.7px;
+            content: '';
+            height: 10px;
+            position: absolute;
+            border-radius: 50%;
+            background: var(--secondaryColor);
+            animation: {
+                iteration-count: infinite;
+                timing-function: linear;
+                name: MOVE-BG;
+                duration: 3s;
+            };
+        }
+    }
+    .faq-image {
+        margin-top: 20px;
+    }
+}
+.faq-accordion {
+    .faq-item {
+        box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
+        background: var(--whiteColor);
+        margin-bottom: 10px;
+
+        .faq-header {
+            padding: 12px 20px 12px 51px;
+            color: var(--blackColor);
+            position: relative;
+            cursor: pointer;
+            font: {
+                size: 15px;
+                weight: 500;
+                family: var(--headingFontFamily);
+            };
+            i {
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 100%;
+                position: absolute;
+                text-align: center;
+                color: var(--whiteColor);
+                background: var(--primaryColor);
+
+                &::before {
+                    left: 0;
+                    top: 50%;
+                    right: 0;
+                    font-size: 13px;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        .faq-content {
+            padding: 15px;
+            font-size: 14.5px;
+            border-top: 1px solid #eeeeee;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.faq-contact-form {
+    margin: 0 auto;
+    max-width: 750px;
+    text-align: center;
+
+    form {
+        .form-control {
+            border: none;
+            height: 50px;
+            background-color: var(--whiteColor);
+            box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, .2) !important;
+            font: {
+                family: var(--headingFontFamily);
+                size: 14.5px;
+            };
+        }
+        .row {
+            margin: {
+                left: -7px;
+                right: -7px;
+            };
+            .col-lg-12, .col-lg-6 {
+                padding: {
+                    left: 7px;
+                    right: 7px;
+                };
+            }
+        }
+        textarea {
+            &.form-control {
+                height: auto;
+                padding-top: 15px;
+                line-height: initial;
+            }
+        }
+        .btn {
+            margin-top: 8px;
+            box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .faq-content {
+        h2 {
+            font-size: 26px;
+        }
+        .bar {
+            height: 4px;
+            margin: 20px 0 20px;
+        }
+    }
+    .faq-accordion {
+        margin-top: 30px;
+    }
+    .faq-contact {
+        margin-top: 50px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .faq-content {
+        text-align: center;
+
+        .bar {
+            margin: {
+                left: auto;
+                right: auto;
+            };
+        }
+    }
+    .faq-accordion {
+        margin-top: 30px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

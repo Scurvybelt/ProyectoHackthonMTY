@@ -1,0 +1,104 @@
+.global-area {
+    background-color: #051947;
+
+    .section-title {
+        h2 {
+            color: var(--whiteColor);
+        }
+        p {
+            color: var(--whiteColor);
+        }
+    }
+}
+.global-content {
+    padding-right: 30px;
+
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style-type: none;
+
+        li {
+            background-color: rgba(0, 0, 0, .12);
+            color: var(--whiteColor);
+            padding: 30px 40px 28px;
+            margin-bottom: 12px;
+            position: relative;
+            border-radius: 2px;
+            z-index: 1;
+            font: {
+                size: 20px;
+                weight: 300;
+                family: var(--headingFontFamily);
+            };
+            &::before {
+                top: 0;
+                left: 0;
+                width: 0%;
+                z-index: -1;
+                content: '';
+                height: 100%;
+                border-radius: 2px;
+                position: absolute;
+                transition: var(--transition);
+                background: var(--primaryGradientColor);
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .global-content {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 30px;
+
+        ul {
+            li {
+                padding: 20px;
+                font-size: 15px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .global-content {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 35px;
+
+        ul {
+            li {
+                padding: 20px;
+                font-size: 18px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

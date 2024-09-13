@@ -1,0 +1,19 @@
+<div class="ctp-faq-area pb-70">
+    <div class="container">
+        <div class="section-title">
+            <h2>Frequently asked questions</h2>
+        </div>
+        <div class="ctp-faq-accordion">
+            <div class="faq-item" *ngFor="let item of accordionItems; let i = index;">
+                <div class="faq-header position-relative" (click)="toggleAccordionItem(item)">
+                    {{item.title}}
+                    <i class='fa-solid' [ngClass]="{'fa-circle-down': !item.open, 'fa-circle-up': item.open}"></i>
+                </div>
+                <div class="faq-content" [hidden]="!item.open">
+                    <p>{{item.content}}</p>
+                    <p>{{item.content2}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

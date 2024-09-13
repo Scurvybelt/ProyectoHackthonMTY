@@ -1,0 +1,972 @@
+.navbar-area {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    position: absolute;
+    transition: var(--transition);
+    background-color: transparent;
+    padding: {
+        top: 20px;
+        bottom: 20px;
+    };
+    &.is-sticky {
+        position: fixed;
+        background-color: var(--whiteColor);
+        box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+        animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+
+        .navbar-brand {
+            img {
+                &:nth-child(1) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    display: block;
+                }
+            }
+        }
+        .klob-nav {
+            .navbar {
+                .navbar-nav {
+                    .nav-item {
+                        a {
+                            color: var(--blackColor);
+
+                            &:hover, &:focus, &.active {
+                                color: var(--primaryColor);
+                            }
+                        }
+                        &:hover, &.active {
+                            a {
+                                color: var(--primaryColor);
+                            }
+                        }
+                        .dropdown-menu {
+                            li {
+                                a {
+                                    color: var(--blackColor);
+
+                                    &:hover, &:focus, &.active {
+                                        color: var(--primaryColor);
+                                    }
+                                }
+                                .dropdown-menu {
+                                    li {
+                                        a {
+                                            color: var(--blackColor);
+
+                                            &:hover, &:focus, &.active {
+                                                color: var(--primaryColor);
+                                            }
+                                        }
+                                        .dropdown-menu {
+                                            li {
+                                                a {
+                                                    color: var(--blackColor);
+
+                                                    &:hover, &:focus, &.active {
+                                                        color: var(--primaryColor);
+                                                    }
+                                                }
+                                                .dropdown-menu {
+                                                    li {
+                                                        a {
+                                                            color: var(--blackColor);
+
+                                                            &:hover, &:focus, &.active {
+                                                                color: var(--primaryColor);
+                                                            }
+                                                        }
+                                                        .dropdown-menu {
+                                                            li {
+                                                                a {
+                                                                    color: var(--blackColor);
+
+                                                                    &:hover, &:focus, &.active {
+                                                                        color: var(--primaryColor);
+                                                                    }
+                                                                }
+                                                                .dropdown-menu {
+                                                                    li {
+                                                                        a {
+                                                                            color: var(--blackColor);
+
+                                                                            &:hover, &:focus, &.active {
+                                                                                color: var(--primaryColor);
+                                                                            }
+                                                                        }
+                                                                        .dropdown-menu {
+                                                                            li {
+                                                                                a {
+                                                                                    color: var(--blackColor);
+
+                                                                                    &:hover, &:focus, &.active {
+                                                                                        color: var(--primaryColor);
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        &.active {
+                                                                            a {
+                                                                                color: var(--primaryColor);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                &.active {
+                                                                    a {
+                                                                        color: var(--primaryColor);
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        &.active {
+                                                            a {
+                                                                color: var(--primaryColor);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.active {
+                                                    a {
+                                                        color: var(--primaryColor);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.active {
+                                            a {
+                                                color: var(--primaryColor);
+                                            }
+                                        }
+                                    }
+                                }
+                                &.active {
+                                    a {
+                                        color: var(--primaryColor);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .others-options {
+                    .login-btn {
+                        color: var(--blackColor);
+
+                        i {
+                            color: var(--primaryColor);
+                        }
+                        &:hover {
+                            color: var(--primaryColor);
+                        }
+                    }
+                }
+            }
+            .navbar-light {
+                .navbar-toggler {
+                    color: var(--blackColor);
+                    border-color: var(--blackColor);
+
+                    .navbar-toggler-icon {
+                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+                    }
+                }
+            }
+        }
+    }
+    &.navbar-style-two {
+        .navbar-brand {
+            img {
+                display: none !important;
+
+                &:nth-child(2) {
+                    display: block !important;
+                }
+            }
+        }
+        .klob-nav {
+            .navbar {
+                .navbar-nav {
+                    .nav-item {
+                        a {
+                            color: var(--blackColor);
+
+                            &:hover, &:focus, &.active {
+                                color: var(--primaryColor);
+                            }
+                        }
+                        &:hover, &.active {
+                            a {
+                                color: var(--primaryColor);
+                            }
+                        }
+                        .dropdown-menu {
+                            li {
+                                a {
+                                    color: var(--blackColor);
+
+                                    &:hover, &:focus, &.active {
+                                        color: var(--primaryColor);
+                                    }
+                                }
+                                .dropdown-menu {
+                                    li {
+                                        a {
+                                            color: var(--blackColor);
+
+                                            &:hover, &:focus, &.active {
+                                                color: var(--primaryColor);
+                                            }
+                                        }
+                                        .dropdown-menu {
+                                            li {
+                                                a {
+                                                    color: var(--blackColor);
+
+                                                    &:hover, &:focus, &.active {
+                                                        color: var(--primaryColor);
+                                                    }
+                                                }
+                                                .dropdown-menu {
+                                                    li {
+                                                        a {
+                                                            color: var(--blackColor);
+
+                                                            &:hover, &:focus, &.active {
+                                                                color: var(--primaryColor);
+                                                            }
+                                                        }
+                                                        .dropdown-menu {
+                                                            li {
+                                                                a {
+                                                                    color: var(--blackColor);
+
+                                                                    &:hover, &:focus, &.active {
+                                                                        color: var(--primaryColor);
+                                                                    }
+                                                                }
+                                                                .dropdown-menu {
+                                                                    li {
+                                                                        a {
+                                                                            color: var(--blackColor);
+
+                                                                            &:hover, &:focus, &.active {
+                                                                                color: var(--primaryColor);
+                                                                            }
+                                                                        }
+                                                                        .dropdown-menu {
+                                                                            li {
+                                                                                a {
+                                                                                    color: var(--blackColor);
+
+                                                                                    &:hover, &:focus, &.active {
+                                                                                        color: var(--primaryColor);
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        &.active {
+                                                                            a {
+                                                                                color: var(--primaryColor);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                &.active {
+                                                                    a {
+                                                                        color: var(--primaryColor);
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        &.active {
+                                                            a {
+                                                                color: var(--primaryColor);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.active {
+                                                    a {
+                                                        color: var(--primaryColor);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.active {
+                                            a {
+                                                color: var(--primaryColor);
+                                            }
+                                        }
+                                    }
+                                }
+                                &.active {
+                                    a {
+                                        color: var(--primaryColor);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .others-options {
+                .login-btn {
+                    color: var(--blackColor);
+
+                    i {
+                        color: var(--blackColor);
+                    }
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+        }
+        .klob-nav {
+            .navbar-light {
+                .navbar-toggler {
+                    color: var(--blackColor);
+                    border-color: var(--blackColor);
+
+                    .navbar-toggler-icon {
+                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+                    }
+                }
+            }
+        }
+    }
+}
+.navbar-brand {
+    padding: {
+        top: 0;
+        bottom: 0;
+    };
+    img {
+        transition: var(--transition);
+
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+.klob-nav {
+    background-color: transparent;
+    padding: 0;
+    
+    .navbar {
+        padding: 0;
+
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+        }
+        .navbar-nav {
+            font-family: var(--headingFontFamily);
+            margin-left: auto;
+
+            .nav-item {
+                position: relative;
+                padding: {
+                    left: 0;
+                    right: 0;
+                    top: 10px;
+                    bottom: 10px;
+                };
+                a {
+                    padding: 0;
+                    color: var(--whiteColor);
+                    font: {
+                        size: 17px;
+                        weight: 400;
+                    };
+                    margin: {
+                        left: 15px;
+                        right: 15px;
+                    };
+                    &:hover, &:focus, &.active {
+                        color: var(--primaryColor);
+                    }
+                    i {
+                        top: -1px;
+                        font-size: 10px;
+                        margin-left: 1px;
+                        position: relative;
+                    }
+                }
+                &:first-child {
+                    a {
+                        margin-left: 0;
+                    }
+                }
+                &:last-child {
+                    a {
+                        margin-right: 0;
+                    }
+                }
+                &:hover, &.active {
+                    a {
+                        color: var(--primaryColor);
+                    }
+                }
+                .dropdown-menu {
+                    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+                    transition: all 0.3s ease-in-out;
+                    background: var(--whiteColor);
+                    position: absolute;
+                    visibility: hidden;
+                    border-radius: 0;
+                    display: block;
+                    border: none;
+                    width: 280px;
+                    z-index: 99;
+                    opacity: 0;
+                    top: 80px;
+                    left: 0;
+                    padding: {
+                        top: 20px;
+                        left: 5px;
+                        right: 5px;
+                        bottom: 20px;
+                    };
+                    li {
+                        padding: 0;
+
+                        a {
+                            margin: 0;
+                            padding: 8px 15px;
+                            color: var(--blackColor);
+                            font: {
+                                size: 15.5px;
+                                weight: 400;
+                            };
+                            &:hover, &:focus, &.active {
+                                color: var(--primaryColor);
+                            }
+                        }
+                        .dropdown-menu {
+                            top: 0;
+                            opacity: 0;
+                            left: -100%;
+                            visibility: hidden;
+
+                            li {
+                                a {
+                                    color: var(--blackColor);
+
+                                    &:hover, &:focus, &.active {
+                                        color: var(--primaryColor);
+                                    }
+                                }
+                                .dropdown-menu {
+                                    top: 0;
+                                    opacity: 0;
+                                    left: 100%;
+                                    visibility: hidden;
+
+                                    li {
+                                        a {
+                                            color: var(--blackColor);
+
+                                            &:hover, &:focus, &.active {
+                                                color: var(--primaryColor);
+                                            }
+                                        }
+                                        .dropdown-menu {
+                                            top: 0;
+                                            opacity: 0;
+                                            left: -100%;
+                                            visibility: hidden;
+
+                                            li {
+                                                a {
+                                                    color: var(--blackColor);
+
+                                                    &:hover, &:focus, &.active {
+                                                        color: var(--primaryColor);
+                                                    }
+                                                }
+                                                .dropdown-menu {
+                                                    top: 0;
+                                                    opacity: 0;
+                                                    left: 100%;
+                                                    visibility: hidden;
+
+                                                    li {
+                                                        a {
+                                                            color: var(--blackColor);
+
+                                                            &:hover, &:focus, &.active {
+                                                                color: var(--primaryColor);
+                                                            }
+                                                        }
+                                                        .dropdown-menu {
+                                                            top: 0;
+                                                            opacity: 0;
+                                                            left: -100%;
+                                                            visibility: hidden;
+
+                                                            li {
+                                                                a {
+                                                                    color: var(--blackColor);
+
+                                                                    &:hover, &:focus, &.active {
+                                                                        color: var(--primaryColor);
+                                                                    }
+                                                                }
+                                                                .dropdown-menu {
+                                                                    top: 0;
+                                                                    opacity: 0;
+                                                                    left: 100%;
+                                                                    visibility: hidden;
+
+                                                                    li {
+                                                                        a {
+                                                                            color: var(--blackColor);
+
+                                                                            &:hover, &:focus, &.active {
+                                                                                color: var(--primaryColor);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                &.active {
+                                                                    a {
+                                                                        color: var(--primaryColor);
+                                                                    }
+                                                                }
+                                                                &:hover {
+                                                                    .dropdown-menu {
+                                                                        visibility: visible;
+                                                                        opacity: 1;
+                                                                        top: -15px;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        &.active {
+                                                            a {
+                                                                color: var(--primaryColor);
+                                                            }
+                                                        }
+                                                        &:hover {
+                                                            .dropdown-menu {
+                                                                visibility: visible;
+                                                                opacity: 1;
+                                                                top: -15px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.active {
+                                                    a {
+                                                        color: var(--primaryColor);
+                                                    }
+                                                }
+                                                &:hover {
+                                                    .dropdown-menu {
+                                                        visibility: visible;
+                                                        opacity: 1;
+                                                        top: -15px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.active {
+                                            a {
+                                                color: var(--primaryColor);
+                                            }
+                                        }
+                                        &:hover {
+                                            .dropdown-menu {
+                                                visibility: visible;
+                                                opacity: 1;
+                                                top: -15px;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.active {
+                                    a {
+                                        color: var(--primaryColor);
+                                    }
+                                }
+                                &:hover {
+                                    .dropdown-menu {
+                                        visibility: visible;
+                                        opacity: 1;
+                                        top: -15px;
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            a {
+                                color: var(--primaryColor);
+                            }
+                        }
+                        &:hover {
+                            .dropdown-menu {
+                                visibility: visible;
+                                opacity: 1;
+                                top: -15px;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .dropdown-menu {
+                        visibility: visible;
+                        opacity: 1;
+                        top: 100%;
+                    }
+                }
+            }
+        }
+        .others-options {
+            margin-left: 25px;
+
+            .login-btn {
+                color: var(--whiteColor);
+                font: {
+                    size: 17px;
+                    weight: 400;
+                    family: var(--headingFontFamily);
+                };
+                i {
+                    margin-right: 2px;
+                    color: #eae563;
+                }
+                &:hover {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+    }
+    .navbar-light {
+        .navbar-toggler {
+            color: var(--whiteColor);
+            border-color: var(--whiteColor);
+            border-radius: 0;
+            box-shadow: unset;
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+        }
+    }
+}
+.container {
+    &.container-fluid {
+        max-width: 100%;
+        padding: {
+            left: 35px;
+            right: 35px;
+        };
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .navbar-area {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+        padding: {
+            top: 15px;
+            bottom: 15px;
+        };
+        &.is-sticky {
+            border-bottom: none;
+            box-shadow: 0 7px 13px 0 rgba(0, 0, 0, .1);
+
+            .klob-nav {
+                nav {
+                    .navbar-collapse {
+                        &.active {
+                            border: 1px solid #eeeeee;
+                        }
+                    }
+                }
+            }
+        }
+        &.navbar-style-two {
+            border-color: rgba(0, 0, 0, .05);
+
+            .klob-nav {
+                nav {
+                    .navbar-collapse {
+                        &.active {
+                            background-color: #f9f9f9;
+                        }
+                    }
+                    .navbar-nav {
+                        .nav-item {
+                            .dropdown-menu {
+                                background-color: #f9f9f9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .klob-nav {
+        nav {
+            .navbar-collapse {
+                &.active {
+                    background-color: var(--whiteColor);
+                    padding: 8px 0 8px 15px;
+                    margin-top: 10px;
+                    display: block;
+                }
+            }
+            .navbar-nav {
+                display: block;
+                max-height: 50vh;
+                overflow: {
+                    y: scroll;
+                    x: hidden;
+                };
+            }
+        }
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    a {
+                        font-size: 15px;
+                        color: var(--blackColor);
+                        margin: {
+                            left: 0;
+                            right: 0;
+                        };
+                    }
+                    .dropdown-menu {
+                        top: 0;
+                        left: 0;
+                        opacity: 1;
+                        width: 100%;
+                        padding: 0 10px;
+                        margin-top: 10px;
+                        border-radius: 0;
+                        box-shadow: unset;
+                        position: relative;
+                        visibility: visible;
+
+                        li {
+                            border-left: 1px dashed #eeeeee;
+
+                            a {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .others-options {
+                border-top: 1px dashed #eeeeee;
+                margin: {
+                    left: -15px;
+                };
+                padding: {
+                    top: 12px;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 2px;
+                }
+                .login-btn {
+                    font-size: 15px;
+                    color: var(--blackColor);
+
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        &.container-fluid {
+            padding: {
+                left: calc(var(--bs-gutter-x) * 0.5);
+                right: calc(var(--bs-gutter-x) * 0.5);
+            };
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .container {
+        &.container-fluid {
+            max-width: 540px;
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .navbar-area {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+        padding: {
+            top: 15px;
+            bottom: 15px;
+        };
+        &.is-sticky {
+            border-bottom: none;
+            box-shadow: 0 7px 13px 0 rgba(0, 0, 0, .1);
+
+            .klob-nav {
+                nav {
+                    .navbar-collapse {
+                        &.active {
+                            border: 1px solid #eeeeee;
+                        }
+                    }
+                }
+            }
+        }
+        &.navbar-style-two {
+            border-color: rgba(0, 0, 0, .05);
+        }
+    }
+    .klob-nav {
+        nav {
+            .navbar-collapse {
+                &.active {
+                    background-color: var(--whiteColor);
+                    padding: 10px 0 10px 20px;
+                    margin-top: 10px;
+                    display: block;
+                }
+            }
+            .navbar-nav {
+                display: block;
+                max-height: 50vh;
+                overflow: {
+                    y: scroll;
+                    x: hidden;
+                };
+            }
+        }
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    a {
+                        font-size: 16px;
+                        color: var(--blackColor);
+                        margin: {
+                            left: 0;
+                            right: 0;
+                        };
+                    }
+                    .dropdown-menu {
+                        top: 0;
+                        left: 0;
+                        opacity: 1;
+                        width: 100%;
+                        padding: 0 10px;
+                        margin-top: 10px;
+                        border-radius: 0;
+                        box-shadow: unset;
+                        position: relative;
+                        visibility: visible;
+
+                        li {
+                            border-left: 1px dashed #eeeeee;
+
+                            a {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .others-options {
+                border-top: 1px dashed #eeeeee;
+                margin: {
+                    left: -20px;
+                };
+                padding: {
+                    top: 12px;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 2px;
+                }
+                .login-btn {
+                    font-size: 16px;
+                    color: var(--blackColor);
+
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        &.container-fluid {
+            max-width: 720px;
+            padding: {
+                left: calc(var(--bs-gutter-x) * 0.5);
+                right: calc(var(--bs-gutter-x) * 0.5);
+            };
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .klob-nav {
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    .dropdown-menu {
+                        width: 265px;
+                        padding: {
+                            top: 15px;
+                            bottom: 15px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        &.container-fluid {
+            max-width: 960px;
+            padding: {
+                left: calc(var(--bs-gutter-x) * 0.5);
+                right: calc(var(--bs-gutter-x) * 0.5);
+            };
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .container {
+        &.container-fluid {
+            max-width: 1920px;
+            padding: {
+                left: 120px;
+                right: 120px;
+            };
+        }
+    }
+
+}

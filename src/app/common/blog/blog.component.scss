@@ -1,0 +1,108 @@
+.single-blog-post {
+    position: relative;
+    margin-bottom: 25px;
+    background: #f7fafd;
+    transition: var(--transition);
+
+    .blog-image {
+        position: relative;
+
+        a {
+            display: block;
+        }
+        .date {
+            left: 20px;
+            bottom: -20px;
+            position: absolute;
+            border-radius: 50px;
+            padding: 10px 16px 8px;
+            color: var(--whiteColor);
+            background: var(--primaryGradientColor);
+            font: {
+                family: var(--headingFontFamily);
+                weight: 500;
+                size: 13px;
+            };
+            i {
+                margin-right: 2px;
+            }
+        }
+    }
+    .blog-post-content {
+        padding: {
+            top: 40px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+        }
+        h3 {
+            line-height: 30px;
+            margin-bottom: 0;
+            font-size: 22px;
+        }
+        span {
+            display: block;
+            font-size: 14.5px;
+            color: var(--blackColor);
+            margin: {
+                top: 13px;
+                bottom: 12px;
+            };
+            a {
+                color: var(--bodyColor);
+
+                &:hover {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+        .read-more-btn {
+            font: {
+                weight: 500;
+                size: 14.5px;
+                family: var(--headingFontFamily);
+            };
+            i {
+                font-size: 12px;
+                margin-left: 2px;
+            }
+        }
+    }
+    &:hover {
+        transform: translateY(-7px);
+        background-color: var(--whiteColor);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .single-blog-post {
+        .blog-post-content {
+            h3 {
+                line-height: 28px;
+                font: {
+                    size: 19px;
+                    weight: 400;
+                };
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

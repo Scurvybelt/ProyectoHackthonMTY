@@ -1,0 +1,103 @@
+.ctp-funfacts-inner-box {
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05);
+    background-color: var(--whiteColor);
+    border-radius: 15px;
+    padding: {
+        left: 50px;
+        right: 50px;
+    };
+    .col-lg-3 {
+        border-right: 1px solid #e0e0e0;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+.ctp-funfact-card {
+    margin-bottom: 25px;
+    text-align: center;
+
+    h3 {
+        background: var(--primaryGradientColor);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 8px;
+        font-size: 50px;
+
+        .odometer {
+            background: var(--primaryGradientColor);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .odometer-value {
+            background: var(--primaryGradientColor);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    p {
+        font: {
+            size: 18px;
+            family: var(--headingFontFamily);
+        };
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .ctp-funfacts-inner-box {
+        padding: {
+            left: 20px;
+            right: 20px;
+        };
+        .col-lg-3 {
+            border-right: none;
+        }
+    }
+    .ctp-funfact-card {
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .ctp-funfacts-inner-box {
+        padding: {
+            left: 20px;
+            right: 20px;
+        };
+    }
+    .ctp-funfact-card {
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

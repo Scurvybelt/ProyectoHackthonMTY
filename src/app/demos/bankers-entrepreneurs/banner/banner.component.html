@@ -1,0 +1,49 @@
+<div class="home-area">
+    <div class="container">
+        <div class="home-slides">
+            <owl-carousel-o [options]="homeSlides">
+                <ng-template carouselSlide>
+                    <div class="banner-item">
+                        <div class="row align-items-center m-0">
+                            <div class="col-lg-6 col-md-12 p-0">
+                                <div class="banner-item-content">
+                                    <h1>Easy, fee-free banking for entrepreneurs</h1>
+                                    <p>Get the financial tools and insights to start, build, and grow your business.</p>
+                                    <a routerLink="/" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 p-0">
+                                <div class="banner-item-image">
+                                    <img src="images/banner-image/banner1.jpg" alt="banner-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="banner-item">
+                        <div class="row align-items-center m-0">
+                            <div class="col-lg-6 col-md-12 p-0">
+                                <div class="banner-item-content">
+                                    <h1>Easy, fee-free banking for entrepreneurs</h1>
+                                    <p>Get the financial tools and insights to start, build, and grow your business.</p>
+                                    <a routerLink="/" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 p-0">
+                                <div class="banner-item-image">
+                                    <img src="images/banner-image/banner2.jpg" alt="banner-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+    <div
+        class="bg-image"
+        style="background-image: url(images/banner-image/banner-bg.jpg);"
+        [ngStyle]="{'background-position-y': backgroundPositionY + 'px'}"
+    ></div>
+</div>

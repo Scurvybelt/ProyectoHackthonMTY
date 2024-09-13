@@ -1,0 +1,35 @@
+<div class="about-area ptb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="about-content">
+                    <span>How we were founded</span>
+                    <h2>Easy, fee-free banking for entrepreneurs</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Every month they moved their money the old way – which wasted their time and money. So they invented a beautifully simple workaround that became a billion-dollar business.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="about-image">
+                    <img src="images/about-img1.jpg" alt="image">
+                    <button type="button" class="video-btn popup-youtube border-0" (click)="openPopup()">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Popup -->
+<div
+    class="video-popup position-fixed d-flex align-items-center justify-content-center text-center top-0 start-0 end-0 bottom-0"
+    *ngIf="isOpen"
+>
+    <div class="popup-inner bg-white position-relative mx-auto">
+        <iframe src="https://www.youtube.com/embed/YDXQ_nociO4" title="Web Design Trends 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button (click)="closePopup()" type="button" class="close-btn p-0 border-0 d-flex align-items-center justify-content-center rounded-circle">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+</div>
