@@ -1,5 +1,25 @@
 .global-area {
-    background-color: #051947;
+  &::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background:
+    linear-gradient(151.59deg, #000000 30%, #ff2f2f 70%),
+    radial-gradient(100% 246.94% at 100% 0, #ffffff 0%, #000000 100%),
+    linear-gradient(143.18deg, #3a0000 0.45%, #ff0000),
+    linear-gradient(167.55deg, #000000, #ff4d4d 74.04%),
+    linear-gradient(351.18deg, #000000 7.52%, #ff4d4d 77.98%),
+    linear-gradient(202.44deg, #000000 12.99%, #ffffff 87.21%),
+    linear-gradient(165.77deg, #000000 15.35%, #ff0000 89.57%);
+    background-blend-mode: overlay,color-burn,screen,overlay,difference,difference,normal;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+}
 
     .section-title {
         h2 {
