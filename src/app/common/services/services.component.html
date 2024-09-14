@@ -52,7 +52,13 @@
               <label for="inputZip">Zip</label>
               <input type="text" class="form-control" id="inputZip" formControlName="zip">
             </div> -->
-            <button [disabled]="this.form.invalid" type="submit" class="btn btn-primary" style="margin-top: 1rem;">Generar IA</button>
+            <button [disabled]="this.form.invalid" type="submit" class="btn btn-primary" style="margin-top: 1rem;">
+                Generar IA
+                <div *ngIf="spinnerIA" style="margin-left: 1rem; width: 1rem; height: 1rem   ;" class="spinner-border" role="status">
+                    <span  class="sr-only">Loading...</span>
+                </div>
+
+            </button>
           </form>
         </div>
       </div>

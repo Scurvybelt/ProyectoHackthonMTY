@@ -28,6 +28,8 @@ export class ServicesComponent {
     groq: any;
     textIA: boolean = false;
     resIA: any = ' ';
+    spinnerIA: boolean = false;
+    
     
   
 
@@ -45,19 +47,38 @@ export class ServicesComponent {
         });
       }
 
-    
+     
 
     async onSubmit(): Promise<void> {
+        this.spinnerIA = true;
         console.log(this.form.valid);
         console.log(this.form.value);
         if(this.form.valid){
-            this.textIA = true;
-            const chatCompletion = await this.groq.chat.completions.create({
-              messages: [{ role: 'user', content: 'Explain the importance of low latency LLMs' }],
-              model: 'llama-3.1-70b-versatile',
-            });
             
-            this.resIA = chatCompletion.choices[0].message.content;
+            const chatCompletion = await this.groq.chat.completions.create({
+              messages: [{ role: 'user', 
+                content: 'Explain the importance of low latency LLMs' }],
+              model: 'llama-3.1-70b-versatile',
+            }).catch(async( error: { name: any; }) => {
+                if(error instanceof Groq.APIError ){
+                    // console.log(error.status); // 400
+                    // console.log(error.name); // BadRequestError
+                    console.log(error);
+                    this.spinnerIA = false;
+                    // console.log(error.headers); // {server: 'nginx', ...}
+                  } else{
+                    throw error;
+                  }
+
+            });
+
+            if(chatCompletion && chatCompletion.choices){
+                this.resIA = chatCompletion.choices[0].message.content;
+                this.spinnerIA = false;
+                this.textIA = true;
+            }
+            
+            
         }
         
     }  
@@ -66,7 +87,7 @@ export class ServicesComponent {
     }  
 
     onServicioChange(){
-        
+
     }
 
 
