@@ -3,10 +3,11 @@
     z-index: 1;
     padding-top: 70px;
     position: relative;
-    background-color: #f7fafd;
+    background-color: #000000;
 }
 .single-footer-widget {
     margin-bottom: 25px;
+    
 
     .logo {
         a {
@@ -105,8 +106,8 @@
 
                 &:hover {
                     color: var(--whiteColor);
-                    border-color: var(--primaryColor);
-                    background-color: var(--primaryColor);
+                    border-color: var(--rojo);
+                    background-color: var(--rojo);
                 }
             }
         }
@@ -429,6 +430,10 @@
         }
     }
 
+}
+
+.colorBlanco {
+    color: white;
 }
 
 /* Min width 992px to Max width 1199px */

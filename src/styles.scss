@@ -12,9 +12,11 @@
     --bodyColor: #6084a4;
     --transition: .5s;
     --fontSize: 15px;
-    --rojo: #ef1532;
+    --rojo: #c70000;
     --blanco: #FFFFFF;
     --negro:  #000;
+    --gris:#606060;
+
 
 }
 body {
@@ -142,13 +144,14 @@ a {
         border-radius: 4px;
         position: absolute;
         transition: var(--transition);
-        background: var(--primaryGradientColor);
+        background: var(--rojo);
     }
     &::after {
         top: 0;
         left: 0;
         opacity: 0;
         width: 100%;
+        
         content: '';
         z-index: -1;
         height: 100%;
@@ -156,7 +159,7 @@ a {
         visibility: hidden;
         position: absolute;
         transition: var(--transition);
-        background: var(--secondaryGradientColor);
+        background: var(--gris);
     }
     &:hover, &:focus {
         background-color: transparent !important;

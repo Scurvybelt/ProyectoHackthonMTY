@@ -390,7 +390,7 @@
                         right: 15px;
                     };
                     &:hover, &:focus, &.active {
-                        color: var(--primaryColor);
+                        color: var(--gris);
                     }
                     i {
                         top: -1px;
@@ -411,7 +411,7 @@
                 }
                 &:hover, &.active {
                     a {
-                        color: var(--primaryColor);
+                        color: var(--gris);
                     }
                 }
                 .dropdown-menu {
@@ -640,7 +640,7 @@
                 };
                 i {
                     margin-right: 2px;
-                    color: #eae563;
+                    color: black;
                 }
                 &:hover {
                     color: var(--primaryColor);
@@ -783,7 +783,7 @@
                     color: var(--blackColor);
 
                     &:hover {
-                        color: var(--primaryColor);
+                        color: var(--gris);
                     }
                 }
             }
@@ -906,7 +906,7 @@
                     color: var(--blackColor);
 
                     &:hover {
-                        color: var(--primaryColor);
+                        color: var(--gris);
                     }
                 }
             }
