@@ -23,18 +23,21 @@ import { BlogRightSidebarPageComponent } from './pages/blog-right-sidebar-page/b
 import { BlogDetailsPageComponent } from './pages/blog-details-page/blog-details-page.component';
 import { ContactPageOneComponent } from './pages/contact-page-one/contact-page-one.component';
 import { ContactPageTwoComponent } from './pages/contact-page-two/contact-page-two.component';
+import { IaComponent } from './common/ia/ia.component';
 
 export const routes: Routes = [
     // {path: '', component: BankingPaymentProcessingComponent},
     {path: 'index-2', component: LoanProvidersComponent},
     {path: 'index-3', component: DigitalBankingComponent},
+    
     {path: '', component: FinancialServiceProviderComponent},
+    // {path: 'ia', component: IaComponent},
     {path: 'index-5', component: BankersEntrepreneursComponent},
     {path: 'index-6', component: SocialFinanceAgencyComponent},
     {path: 'index-7', component: CurrencyTransferProviderComponent},
     {path: 'about', component: AboutPageOneComponent},
     {path: 'about-2', component: AboutPageTwoComponent},
-    {path: 'features', component: FeaturesPageComponent},
+    {path: 'ia', component: FeaturesPageComponent},
     {path: 'pricing', component: PricingPageComponent},
     {path: 'personal', component: PersonalPageComponent},
     {path: 'business', component: BusinessPageComponent},

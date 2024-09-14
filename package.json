@@ -25,6 +25,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "express": "^4.18.2",
+    "groq-sdk": "^0.7.0",
     "ngx-owl-carousel-o": "^18.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
