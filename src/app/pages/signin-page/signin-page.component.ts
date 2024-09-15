@@ -29,8 +29,17 @@ export class SigninPageComponent {
 
 
     onSubmit(){
-        this.signinForm.value;
+        let user = JSON.parse(localStorage.getItem('user') || '{}');
+        user = {
+            ...user,
+            ...this.signinForm.value,
+            lugarRecidencia: 'Ciudad de México', // Ejemplo de nueva propiedad
+            ingresosMensuales: 20000,
+            ocupacion: 'Project Manager'// Ejemplo de nueva propiedad
+        };
+
         console.log(this.signinForm.value);
+        localStorage.setItem('user', JSON.stringify(user));
         // this.service.signin(this.signinForm.valid).subscribe((data) => {
         //     console.log(data);
         // })

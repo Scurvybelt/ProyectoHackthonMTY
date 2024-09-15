@@ -36,6 +36,9 @@ export class ServicesComponent {
     int: any = '';
     mostrarPersonalizado: boolean = false;
     spinnerPersonalizado: boolean = false;
+    spinnerAcesor: boolean = false;
+    resPersonalizado: any  = ' ';
+    textPersonalizado: boolean = false;
     
     
   
@@ -56,25 +59,33 @@ export class ServicesComponent {
         if(localStorage.getItem('user')){
             this.mostrarPersonalizado = true;
 
-
         }
     }
 
     async generarPersonalizado(){
+        this.spinnerAcesor = true;
         // let user = JSON.parse(localStorage.getItem('user'));
         // let paisRecidencia = user.paisRecidencia;
-        let prompt = 
+        let user = JSON.parse(localStorage.getItem('user') || '{}');
+        let paisRecidencia = user.paisResidencia;
+        let salario = user.ingresosMensuales;
+        let ocupacion = user.ocupacion;
+        console.log(paisRecidencia);
+        console.log(salario);
+        console.log(ocupacion);
+        let prompt = "Generame un prompt que me ayude en mis finanzas personales teniendo en cuenta que trabajo en "+ ocupacion +" gano " + salario + " esto y vivo aqui "+paisRecidencia + " y que todos las recomendaciones sea relacionado con los productos que banorte ofrece y solo los de banorte y que la respuesta sea en solo en HTML"; ;
         this.spinnerPersonalizado = true;
         const chatCompletion = await this.groq.chat.completions.create({
             messages: [{ role: 'user', 
-              content:  'Generame un prompt que me ayude en mis finanzas personales teniendo en cuenta que trabajo en esto gano esto y vivo aqui'}],
+              content:  prompt}],
             model: 'llama-3.1-70b-versatile',
           }).catch(async( error: { name: any; }) => {
               if(error instanceof Groq.APIError ){
+                  this.spinnerAcesor = false;
                   // console.log(error.status); // 400
                   // console.log(error.name); // BadRequestError
                   console.log(error);
-                  this.spinnerIA = false;
+                  this.spinnerAcesor = false;
                   // console.log(error.headers); // {server: 'nginx', ...}
                 } else{
                   throw error;
@@ -83,9 +94,9 @@ export class ServicesComponent {
           });
 
           if(chatCompletion && chatCompletion.choices){
-              this.resIA = chatCompletion.choices[0].message.content;
-              this.spinnerIA = false;
-              this.textIA = true;
+              this.resPersonalizado = chatCompletion.choices[0].message.content;
+              this.spinnerAcesor = false;
+              this.textPersonalizado = true;
           }
 
 

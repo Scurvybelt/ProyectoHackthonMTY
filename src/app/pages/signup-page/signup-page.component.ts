@@ -39,7 +39,7 @@ signupForm: any;
   onSubmit(){
     console.log(this.signupForm.value);
     localStorage.setItem('user', JSON.stringify(this.signupForm.value));
-    this.router.navigate(['/personal']);
+    this.router.navigate(['']);
     // this.azure.signup(this.signupForm.value).subscribe((data) => {
     //   console.log(data);
     // });
