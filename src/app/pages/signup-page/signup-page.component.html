@@ -1,52 +1,91 @@
 <div class="signup-area">
-    <div class="row m-0">
-        <div class="col-lg-6 col-md-12 p-0">
-            <div
-                class="signup-image"
-                style="background-image: url(images/fotos/edificioBanorte.jpg);"
-            >
-                
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-12 p-0">
-            <div class="signup-content">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="signup-form">
-                            <div class="logo">
-                                <a routerLink="/" class="d-inline-block">
-                                    <img src="images/logos/BanorteNegro.png" alt="image">
-                                </a>
+  <div class="row m-0">
+      <div class="col-lg-6 col-md-12 p-0">
+          <div class="signup-image" style="background-image: url(images/fotos/edificioBanorte.jpg);">
+          </div>
+      </div>
+      <div class="col-lg-6 col-md-12 p-0">
+          <div class="signup-content">
+              <div class="d-table">
+                  <div class="d-table-cell">
+                      <div class="signup-form">
+                          <div class="logo">
+                              <a routerLink="/" class="d-inline-block">
+                                  <img src="images/logos/BanorteNegro.png" alt="image">
+                              </a>
+                          </div>
+                          <h3>Crea tu cuenta</h3>
+                          <p>¿Ya tienes Cuenta? <a routerLink="/signin">Inicia Sesión</a></p>
+
+                          <div class="form-group mb-3">
+                            <label for="ine">Sube tu INE (Imagen):</label>
+                            <input (change)="ine($event)" type="file" id="ine" class="form-control" accept="image/*" required>
+                          </div>
+                          <!-- Formulario de registro -->
+                          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" style="display: grid; grid-template-columns: 1fr auto; gap: 1rem;">
+                            
+                            <!-- Nombre Completo -->
+                            <div class="form-group mb-3">
+                              <input formControlName="username" type="text" placeholder="Nombre Completo" class="form-control" required>
                             </div>
-                            <h3>Crea tu cuenta</h3>
-                            <p>Ya tienes Cuenta? <a routerLink="/signin">Inicia Sesion</a></p>
-                            <form>
-                                <div class="form-group mb-3">
-                                    <input type="email" name="email" id="email" placeholder="email" class="form-control">
-                                </div>
-                                <div class="form-group mb-3">
-                                    <input type="password" name="password" id="password" placeholder="Crea contraseña" class="form-control">
-                                </div>
-                                <div class="form-group mb-3">
-                                    <input type="password" name="password" id="password" placeholder="Repite Contraseña" class="form-control">
-                                </div>
-                                <button type="submit" class="btn btn-primary">
-                                    Sign Up
-                                </button>
-                                <div class="connect-with-social">
-                                    <span>Or</span>
-                                    <button type="submit" class="facebook">
-                                        <i class="fab fa-facebook-square"></i> Connect with Facebook
-                                    </button>
-                                    <button type="submit" class="google">
-                                        <i class="fab fa-google"></i> Connect with Google
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                          
+                            <!-- Fecha de Nacimiento -->
+                            <div class="form-group mb-3">
+                              <input formControlName="fechaNacimiento" type="date" placeholder="Fecha de Nacimiento" class="form-control" required>
+                            </div>
+                          
+                            <!-- País de Residencia -->
+                            <div class="form-group mb-3">
+                              <input formControlName="paisResidencia" type="text" placeholder="País de Residencia" class="form-control" required>
+                            </div>
+                          
+                            <!-- Teléfono -->
+                            <div class="form-group mb-3">
+                              <input formControlName="telefono" type="tel" placeholder="Teléfono" class="form-control" required>
+                            </div>
+                          
+                            <!-- Ingresos Mensuales -->
+                            <div class="form-group mb-3">
+                              <input formControlName="ingresosMensuales" type="number" placeholder="Ingresos Mensuales" class="form-control" required>
+                            </div>
+                          
+                            <!-- Ocupación -->
+                            <div class="form-group mb-3">
+                              <input formControlName="ocupacion" type="text" placeholder="Ocupación" class="form-control" required>
+                            </div>
+                          
+                            <!-- Email -->
+                            <div class="form-group mb-3">
+                              <input formControlName="email" type="email" placeholder="Email" class="form-control" required>
+                            </div>
+                          
+                            <!-- Contraseña -->
+                            <div class="form-group mb-3">
+                              <input formControlName="passwordHash" type="password" placeholder="Crea contraseña" class="form-control" required>
+                            </div>
+
+                            <!-- Repit eContraseña -->
+                            <div class="form-group mb-3">
+                              <input formControlName="password2" type="password2" placeholder="Repite contraseña" class="form-control" required>
+                            </div>
+                          
+                            <!-- Términos y Condiciones -->
+                            <div class="form-group mb-3" style="display: flex; align-items: center;">
+                              <input formControlName="terms" type="checkbox" class="form-check-input" required>
+                              <label for="terms" class="form-check-label">Acepto los <a href="#">términos y condiciones</a></label>
+                            </div>
+                            <!-- Subir INE -->
+                            
+                          
+                            <!-- Botón de Registro -->
+                            <button type="submit" class="btn btn-primary">
+                              Sign Up
+                            </button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>

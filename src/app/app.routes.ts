@@ -32,7 +32,7 @@ export const routes: Routes = [
     
     {path: '', component: FinancialServiceProviderComponent},
     // {path: 'ia', component: IaComponent},
-    {path: 'index-5', component: BankersEntrepreneursComponent},
+    {path: 'personal', component: BankersEntrepreneursComponent},
     {path: 'index-6', component: SocialFinanceAgencyComponent},
     {path: 'index-7', component: CurrencyTransferProviderComponent},
     {path: 'about', component: AboutPageOneComponent},
