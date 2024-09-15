@@ -3,27 +3,28 @@
       <div class="overview-box align-items-center">
         <div class="overview-content">
           <div class="content left-content">
-            <h2>Usa Nuestra IA</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>Descubre tu tarjeta ideal con nuestra IA.</h2>
+            <p>Empieza hoy a construir tu futuro financiero con nosotros: sin comisiones, con recompensas por tus compras y control total desde tu celular </p>
           </div>
         </div>
         <div class="overview-image">
           <form [formGroup]="form" (ngSubmit)="onSubmit()" style="padding: 2rem;">
             <div class="form-group">
-              <label>¿Que tipo de servicio buscas?</label><!--tarjeta credito debito o otro-->
+              <label>¿Que tipo de tarjeta buscas?</label><!--tarjeta credito debito o otro-->
               <select class="form-control"  formControlName="servicio" (change)="onServicioChange($event)">
                 <option value="Debito" >Debito</option>
                 <option value="Credito">Credito</option>
-                <option value="Otro">Otro</option>
               </select>
             </div>
 
             <div class="form-group">
                 <label>¿Tema de tu interes?</label><!--tarjeta credito debito o otro-->
               <select class="form-control"  formControlName="interes" (change)="onInteresChange($event)" >
-                <option value="Promociones" >Promociones</option>
+                <option value="Reconmpensas" >Reconmpensas</option>
                 <option value="Beneficios">Beneficios</option>
                 <option value="Cashback">Cashback</option>
+                <option value="sin Comision">sin Comision</option>
+                <option value="saldo minimo requerido">saldo minimo requerido</option>
               </select>
             </div>
             <!-- <div class="form-group">

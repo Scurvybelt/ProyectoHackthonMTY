@@ -17,63 +17,64 @@
                           <h3>Crea tu cuenta</h3>
                           <p>¿Ya tienes Cuenta? <a routerLink="/signin">Inicia Sesión</a></p>
 
+                          <div class="form-group mb-3">
+                            <label for="ine">Sube tu INE (Imagen):</label>
+                            <input (change)="ine($event)" type="file" id="ine" class="form-control" accept="image/*" required>
+                          </div>
                           <!-- Formulario de registro -->
-                          <form (submit)="onSubmit($event)">
-                              <!-- Username -->
-                              <div class="form-group mb-3">
-                                  <input type="text" name="username" id="username" placeholder="Username" class="form-control" required>
-                              </div>
-
-                              <!-- Nombre Completo -->
-                              <div class="form-group mb-3">
-                                  <input type="text" name="nombre_completo" id="nombre_completo" placeholder="Nombre Completo" class="form-control" required>
-                              </div>
-
-                              <!-- Fecha de Nacimiento -->
-                              <div class="form-group mb-3">
-                                  <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha de Nacimiento" class="form-control" required>
-                              </div>
-
-                              <!-- País de Residencia -->
-                              <div class="form-group mb-3">
-                                  <input type="text" name="pais_residencia" id="pais_residencia" placeholder="País de Residencia" class="form-control" required>
-                              </div>
-
-                              <!-- Teléfono -->
-                              <div class="form-group mb-3">
-                                  <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" class="form-control" required>
-                              </div>
-
-                              <!-- Ingresos Mensuales -->
-                              <div class="form-group mb-3">
-                                  <input type="number" name="ingresos_mensuales" id="ingresos_mensuales" placeholder="Ingresos Mensuales" class="form-control" required>
-                              </div>
-
-                              <!-- Ocupación -->
-                              <div class="form-group mb-3">
-                                  <input type="text" name="ocupacion" id="ocupacion" placeholder="Ocupación" class="form-control" required>
-                              </div>
-
-                              <!-- Email -->
-                              <div class="form-group mb-3">
-                                  <input type="email" name="email" id="email" placeholder="Email" class="form-control" required>
-                              </div>
-
-                              <!-- Contraseña -->
-                              <div class="form-group mb-3">
-                                  <input type="password" name="password" id="password" placeholder="Crea contraseña" class="form-control" required>
-                              </div>
-
-                              <!-- Subir INE -->
-                              <div class="form-group mb-3">
-                                  <label for="ine">Sube tu INE (Imagen):</label>
-                                  <input type="file" name="ine" id="ine" class="form-control" accept="image/*" required>
-                              </div>
-
-                              <!-- Botón de Registro -->
-                              <button type="submit" class="btn btn-primary">
-                                  Sign Up
-                              </button>
+                          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                            <!-- Username -->
+                            <div class="form-group mb-3">
+                              <input formControlName="username" type="text" placeholder="Username" class="form-control" required>
+                            </div>
+                          
+                            <!-- Nombre Completo -->
+                            <div class="form-group mb-3">
+                              <input formControlName="nombre_completo" type="text" placeholder="Nombre Completo" class="form-control" required>
+                            </div>
+                          
+                            <!-- Fecha de Nacimiento -->
+                            <div class="form-group mb-3">
+                              <input formControlName="fecha_nacimiento" type="date" placeholder="Fecha de Nacimiento" class="form-control" required>
+                            </div>
+                          
+                            <!-- País de Residencia -->
+                            <div class="form-group mb-3">
+                              <input formControlName="pais_residencia" type="text" placeholder="País de Residencia" class="form-control" required>
+                            </div>
+                          
+                            <!-- Teléfono -->
+                            <div class="form-group mb-3">
+                              <input formControlName="telefono" type="tel" placeholder="Teléfono" class="form-control" required>
+                            </div>
+                          
+                            <!-- Ingresos Mensuales -->
+                            <div class="form-group mb-3">
+                              <input formControlName="ingresos_mensuales" type="number" placeholder="Ingresos Mensuales" class="form-control" required>
+                            </div>
+                          
+                            <!-- Ocupación -->
+                            <div class="form-group mb-3">
+                              <input formControlName="ocupacion" type="text" placeholder="Ocupación" class="form-control" required>
+                            </div>
+                          
+                            <!-- Email -->
+                            <div class="form-group mb-3">
+                              <input formControlName="email" type="email" placeholder="Email" class="form-control" required>
+                            </div>
+                          
+                            <!-- Contraseña -->
+                            <div class="form-group mb-3">
+                              <input formControlName="password" type="password" placeholder="Crea contraseña" class="form-control" required>
+                            </div>
+                          
+                            <!-- Subir INE -->
+                            
+                          
+                            <!-- Botón de Registro -->
+                            <button type="submit" class="btn btn-primary">
+                              Sign Up
+                            </button>
                           </form>
                       </div>
                   </div>

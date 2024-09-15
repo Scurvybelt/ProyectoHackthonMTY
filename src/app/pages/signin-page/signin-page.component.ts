@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+
 @Component({
     selector: 'app-signin-page',
     standalone: true,
@@ -12,4 +13,9 @@ import { RouterLink } from '@angular/router';
     templateUrl: './signin-page.component.html',
     styleUrl: './signin-page.component.scss'
 })
-export class SigninPageComponent {}
+export class SigninPageComponent {
+    
+    constructor(){
+        
+    }
+}
