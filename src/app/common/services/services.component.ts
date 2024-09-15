@@ -34,6 +34,8 @@ export class ServicesComponent {
     spinnerIA: boolean = false;
     ser: any = '';
     int: any = '';
+    mostrarPersonalizado: boolean = false;
+    spinnerPersonalizado: boolean = false;
     
     
   
@@ -50,7 +52,44 @@ export class ServicesComponent {
           servicio: ['', [Validators.required]],
           interes: ['', Validators.required],
         });
-      }
+
+        if(localStorage.getItem('user')){
+            this.mostrarPersonalizado = true;
+
+
+        }
+    }
+
+    async generarPersonalizado(){
+        // let user = JSON.parse(localStorage.getItem('user'));
+        // let paisRecidencia = user.paisRecidencia;
+        let prompt = 
+        this.spinnerPersonalizado = true;
+        const chatCompletion = await this.groq.chat.completions.create({
+            messages: [{ role: 'user', 
+              content:  'Generame un prompt que me ayude en mis finanzas personales teniendo en cuenta que trabajo en esto gano esto y vivo aqui'}],
+            model: 'llama-3.1-70b-versatile',
+          }).catch(async( error: { name: any; }) => {
+              if(error instanceof Groq.APIError ){
+                  // console.log(error.status); // 400
+                  // console.log(error.name); // BadRequestError
+                  console.log(error);
+                  this.spinnerIA = false;
+                  // console.log(error.headers); // {server: 'nginx', ...}
+                } else{
+                  throw error;
+                }
+
+          });
+
+          if(chatCompletion && chatCompletion.choices){
+              this.resIA = chatCompletion.choices[0].message.content;
+              this.spinnerIA = false;
+              this.textIA = true;
+          }
+
+
+    }
 
      
 

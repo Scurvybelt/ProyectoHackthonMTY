@@ -75,4 +75,71 @@
     </div>
 </div>
 
+
+<div class="services-area ptb-70">
+  <div class="container-fluid p-0">
+    <div class="overview-box align-items-center">
+      <div class="overview-content">
+        <div class="content left-content">
+          <h2>¿Quieres un asesoramiento 100% personalizado de tus finanzas?.</h2>
+          <p>En cuestion de segundos recibe un asesoramiento personalizado usando IA</p>
+        </div>
+      </div>
+      <div class="overview-image">
+        <form   style="padding: 2rem;">
+          <div class="form-group">
+            <label>¿Quieres un asesoramiento 100% personalizado de tus finanzas?</label><!--tarjeta credito debito o otro-->
+            
+          </div>
+          <button  type="submit" class="btn btn-primary" style="margin-top: 1rem;" (click)="generarPersonalizado()">
+            Generar IA
+            <div *ngIf="spinnerIA" style="margin-left: 1rem; width: 1rem; height: 1rem   ;" class="spinner-border" role="status">
+                <span  class="sr-only">Loading...</span>
+            </div>
+          </button>
+          <!-- <div class="form-group">
+              <select class="form-control"  formControlName="metasFinancieras" >
+                  <option selected>ahorar</option>
+                  <option>invertir</option>
+                  <option>retiro</option>
+              </select>
+          </div> -->
+          <!-- <div class="form-group">
+            <label for="inputAddress2">Tipo de compras realizas</label>
+            <input type="text" class="form-control" id="inputAddress2" formControlName="address2" placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="form-group">
+            <label for="inputCity">que valoras mas en una tarjeta</label>
+            <input type="text" class="form-control" id="inputCity" formControlName="city">
+          </div>
+          <div class="form-group">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control" formControlName="state">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip" formControlName="zip">
+          </div> -->
+          
+        </form>
+      </div>
+    </div>
+    <div  *ngIf="textIA" style="text-align: center; padding: 2rem;">
+      <!-- <textarea []="resIA"  style="height: 13rem; width: 100%;"></textarea> -->
+      <div [innerHTML]="resIA"></div> 
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <button class="btn btn-primary nav-link"  *ngIf="textIA" routerLink="/signup">Crear Cuenta</button>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+
+
   

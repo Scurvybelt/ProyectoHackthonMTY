@@ -22,25 +22,21 @@
                             <input (change)="ine($event)" type="file" id="ine" class="form-control" accept="image/*" required>
                           </div>
                           <!-- Formulario de registro -->
-                          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-                            <!-- Username -->
-                            <div class="form-group mb-3">
-                              <input formControlName="username" type="text" placeholder="Username" class="form-control" required>
-                            </div>
-                          
+                          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" style="display: grid; grid-template-columns: 1fr auto; gap: 1rem;">
+                            
                             <!-- Nombre Completo -->
                             <div class="form-group mb-3">
-                              <input formControlName="nombre_completo" type="text" placeholder="Nombre Completo" class="form-control" required>
+                              <input formControlName="username" type="text" placeholder="Nombre Completo" class="form-control" required>
                             </div>
                           
                             <!-- Fecha de Nacimiento -->
                             <div class="form-group mb-3">
-                              <input formControlName="fecha_nacimiento" type="date" placeholder="Fecha de Nacimiento" class="form-control" required>
+                              <input formControlName="fechaNacimiento" type="date" placeholder="Fecha de Nacimiento" class="form-control" required>
                             </div>
                           
                             <!-- País de Residencia -->
                             <div class="form-group mb-3">
-                              <input formControlName="pais_residencia" type="text" placeholder="País de Residencia" class="form-control" required>
+                              <input formControlName="paisResidencia" type="text" placeholder="País de Residencia" class="form-control" required>
                             </div>
                           
                             <!-- Teléfono -->
@@ -50,7 +46,7 @@
                           
                             <!-- Ingresos Mensuales -->
                             <div class="form-group mb-3">
-                              <input formControlName="ingresos_mensuales" type="number" placeholder="Ingresos Mensuales" class="form-control" required>
+                              <input formControlName="ingresosMensuales" type="number" placeholder="Ingresos Mensuales" class="form-control" required>
                             </div>
                           
                             <!-- Ocupación -->
@@ -65,9 +61,19 @@
                           
                             <!-- Contraseña -->
                             <div class="form-group mb-3">
-                              <input formControlName="password" type="password" placeholder="Crea contraseña" class="form-control" required>
+                              <input formControlName="passwordHash" type="password" placeholder="Crea contraseña" class="form-control" required>
+                            </div>
+
+                            <!-- Repit eContraseña -->
+                            <div class="form-group mb-3">
+                              <input formControlName="password2" type="password2" placeholder="Repite contraseña" class="form-control" required>
                             </div>
                           
+                            <!-- Términos y Condiciones -->
+                            <div class="form-group mb-3" style="display: flex; align-items: center;">
+                              <input formControlName="terms" type="checkbox" class="form-check-input" required>
+                              <label for="terms" class="form-check-label">Acepto los <a href="#">términos y condiciones</a></label>
+                            </div>
                             <!-- Subir INE -->
                             
                           

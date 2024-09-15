@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AzureService } from '../../common/servicios/azure.service';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -19,31 +19,33 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 export class SignupPageComponent {
 imageUrl: any = '';
 signupForm: any;
-  constructor(private fb: FormBuilder,private azure: AzureService){
+  constructor(private fb: FormBuilder, private router: Router){
     this.signupForm = this.fb.group({
       username: [''],
       nombre_completo: [''],
-      fecha_nacimiento: [''],
-      pais_residencia: [''],
+      fechaNacimiento: [''],
+      paisResidencia: [''],
       telefono: [''],
-      ingresos_mensuales: [''],
+      ingresosMensuales: [''],
       ocupacion: [''],
       email: [''],
-      password: ['']
+      passwordHash: [''],
+      password2: [''],
+      terms: ['']
     });
   }
   // Método para capturar la imagen y convertirla en un array de bytes
   
   onSubmit(){
-    let url = this.imageUrl
-    console.log(url);
-    this.azure.analyzeImage(url)
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error('Error analyzing image: ', error);
-     });
+    console.log(this.signupForm.value);
+    localStorage.setItem('user', JSON.stringify(this.signupForm.value));
+    this.router.navigate(['/personal']);
+    // this.azure.signup(this.signupForm.value).subscribe((data) => {
+    //   console.log(data);
+    // });
+
+
+
   }
   ine(event:Event){
     const input = event.target as HTMLInputElement;
