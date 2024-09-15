@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AzureService } from '../../common/servicios/azure.service';
 
 
@@ -20,7 +20,7 @@ import { AzureService } from '../../common/servicios/azure.service';
 export class SigninPageComponent {
     signinForm: any;
     
-    constructor(private fb: FormBuilder, ){
+    constructor(private fb: FormBuilder, private router: Router){
         this.signinForm = this.fb.group({
             username: [''],
             password: ['']
@@ -43,6 +43,7 @@ export class SigninPageComponent {
         // this.service.signin(this.signinForm.valid).subscribe((data) => {
         //     console.log(data);
         // })
+        this.router.navigate(['']);
 
     }
 }

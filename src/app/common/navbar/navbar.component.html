@@ -173,9 +173,13 @@
                         </li>
                     </ul>
                     <div class="others-options">
-                        <a routerLink="/signin" class="login-btn">
+                        <a *ngIf="!logeado" routerLink="/signin" class="login-btn">
                             <i class="flaticon-user"></i> Log In
                         </a>
+                        <a (click)="logOut()" *ngIf="logeado"  class="login-btn">
+                            <i class="flaticon-user"></i> Log Out
+                        </a>
+
                     </div>
                 </div>
             </nav>
