@@ -73,7 +73,7 @@ export class ServicesComponent {
         console.log(paisRecidencia);
         console.log(salario);
         console.log(ocupacion);
-        let prompt = "Generame un prompt que me ayude en mis finanzas personales teniendo en cuenta que trabajo en "+ ocupacion +" gano " + salario + " esto y vivo aqui "+paisRecidencia + " y que todos las recomendaciones sea relacionado con los productos que banorte ofrece y solo los de banorte y que la respuesta sea en solo en HTML"; ;
+        let prompt = "Generame una respuesta que me ayude en mis finanzas personales, teniendo en cuenta que trabajo en "+ ocupacion +" y  gano " + salario + " y ademas vivo en  "+paisRecidencia + ". Ademas que todos las recomendaciones sea relacionado con los productos que banorte ofrece y solo los de banorte y que la respuesta sea en solo en HTML"; ;
         this.spinnerPersonalizado = true;
         const chatCompletion = await this.groq.chat.completions.create({
             messages: [{ role: 'user', 
