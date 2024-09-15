@@ -7,6 +7,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox'; // Import MatChe
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import Groq from 'groq-sdk';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-services',
@@ -18,7 +19,9 @@ import { CommonModule } from '@angular/common';
         MatButtonModule,
         MatCheckboxModule,
         ReactiveFormsModule,
-        CommonModule
+        CommonModule,
+        RouterLink
+        
     ],
     templateUrl: './services.component.html',
     styleUrl: './services.component.scss'
@@ -29,6 +32,8 @@ export class ServicesComponent {
     textIA: boolean = false;
     resIA: any = ' ';
     spinnerIA: boolean = false;
+    ser: any = '';
+    int: any = '';
     
     
   
@@ -57,7 +62,7 @@ export class ServicesComponent {
             
             const chatCompletion = await this.groq.chat.completions.create({
               messages: [{ role: 'user', 
-                content: 'Explain the importance of low latency LLMs' }],
+                content: this.resIA }],
               model: 'llama-3.1-70b-versatile',
             }).catch(async( error: { name: any; }) => {
                 if(error instanceof Groq.APIError ){
@@ -82,13 +87,17 @@ export class ServicesComponent {
         }
         
     }  
-    onInteresChange(){
+    onServicioChange(e:any){
+        this.ser = this.form.get('servicio').value;
+        this.resIA = 'Busca en los productos de banorte por las '+ this.ser+'  en las que ofrezcan '+ this.int + '' + '. Solo dame productos relacionados con banorte los demas no me lo muestres y quiero que la informacion me la des en HTML y solo en HTML' ;
+    }
 
+    onInteresChange(e:any){
+        this.int = this.form.get('interes').value;
+        this.resIA = 'Busca en los productos de banorte por las '+ this.ser+'  en las que ofrezcan '+ this.int + ' ' + 'Solo dame productos relacionados con banorte los demas no me lo muestres quiero que la informacion me la des en HTML y solo en HTML';
     }  
 
-    onServicioChange(){
-
-    }
+    
 
 
 }
