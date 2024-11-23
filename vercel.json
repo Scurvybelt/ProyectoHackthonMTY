@@ -1,5 +1,16 @@
+
 {
-    "rewrites":  [
-      {"source": "/(.*)", "destination": "/"}
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/klob/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/dist/klob/$1"
+    }
+  ]
+}
