@@ -29,9 +29,12 @@ export class NavbarComponent {
     ) { }
 
     ngOnInit(){
-        if(localStorage.getItem('user')){
-            this.logeado = true;
+        if(typeof window !== 'undefined'){
+            if(localStorage.getItem('user')){
+                this.logeado = true;
+            }
         }
+        
     }
 
     // Mean Trigger
