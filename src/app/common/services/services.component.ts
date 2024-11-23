@@ -55,11 +55,13 @@ export class ServicesComponent {
           servicio: ['', [Validators.required]],
           interes: ['', Validators.required],
         });
-
-        if(localStorage.getItem('user')){
-            this.mostrarPersonalizado = true;
-
+        if(typeof window !== 'undefined'){
+            if(localStorage.getItem('user')){
+                this.mostrarPersonalizado = true;
+    
+            }
         }
+        
     }
 
     async generarPersonalizado(){

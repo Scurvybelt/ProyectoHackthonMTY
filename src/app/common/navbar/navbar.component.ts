@@ -43,9 +43,12 @@ export class NavbarComponent {
         this.classApplied = !this.classApplied;
     }
 
-    logOut(){
-        localStorage.removeItem('user');
-        location.reload();
+    logOut(){4 
+        if(typeof window !== 'undefined'){
+            localStorage.removeItem('user');
+            location.reload();
+        }
+        
     }
 
 }
